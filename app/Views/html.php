@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
     <style>
         .container {
             display: flex;
@@ -92,12 +88,6 @@
                 <button class="button" onclick="selectTime('10:00')">10:00</button>
                 <button class="button" onclick="selectTime('10:15')">10:15</button>
                 <button class="button" onclick="selectTime('10:30')">10:30</button>
-                <button class="button" onclick="selectTime('10:45')">10:45</button>
-                <button class="button" onclick="selectTime('11:00')">11:00</button>
-                <button class="button" onclick="selectTime('11:15')">11:15</button>
-                <button class="button" onclick="selectTime('11:30')">11:30</button>
-                <button class="button" onclick="selectTime('11:45')">11:45</button>
-                <button class="button" onclick="selectTime('12:00')">12:00</button>
                 <!-- Add more buttons with different time slots -->
             </div>
         </div>
@@ -170,7 +160,8 @@
                 }
             }
 
-            document.getElementById("result").textContent = output;
+            // Mengirim hasil ke halaman confirmation
+            window.location.href = "confirmation?hasil=" + encodeURIComponent(output);
         }
     </script>
 </body>

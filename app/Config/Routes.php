@@ -32,8 +32,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/booking', 'Page::booking');
-$routes->get('/confirmation', 'Page::confirmation');
+$routes->get('/booking', 'Schedule::booking');
+$routes->get('/confirmation', 'Confirmation::index');
 
 
 /*

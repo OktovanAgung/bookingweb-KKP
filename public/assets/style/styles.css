@@ -1,0 +1,111 @@
+/* schedule */
+.container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.left {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.center {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.right {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.calendar {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.schedule {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#selectedDate {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#submitBtn {
+    margin-top: 20px;
+}
+
+/* confirmation */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+    grid-column: 1;
+}
+
+.form {
+    padding: 20px;
+    grid-column: 3;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+    height: 100px;
+}
+
+.form button {
+    padding: 10px 20px;
+    margin-right: 10px;
+}

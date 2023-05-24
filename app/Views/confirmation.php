@@ -5,63 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url('assets/style/styles.css') ?>">
     <title>Confirmation</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            width: 600px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: grid;
-            grid-template-columns: 1fr 1px 1fr;
-        }
-
-        .logo {
-            text-align: center;
-            padding: 20px;
-            grid-column: 1;
-        }
-
-        .form {
-            padding: 20px;
-            grid-column: 3;
-        }
-
-        .form input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            resize: vertical;
-        }
-
-        .form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            resize: vertical;
-            height: 100px;
-        }
-
-        .form button {
-            padding: 10px 20px;
-            margin-right: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="/assets/img/logo.png" alt="Logo" width="244.29" height="244.29">
             <div id="result"></div>
         </div>
         <div style="background-color: #ccc;"></div> <!-- Garis pemisah -->
@@ -88,7 +39,19 @@
         }
 
         function konfirmasi() {
-            // Kode aksi untuk tombol Konfirmasi
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var catatan = document.getElementById("catatan").value;
+
+            // Mengirim data ke halaman confirmation
+            var urlParams = new URLSearchParams();
+            urlParams.append('hasil', hasil);
+            urlParams.append('nama', nama);
+            urlParams.append('email', email);
+            urlParams.append('catatan', catatan);
+
+            var query = urlParams.toString();
+            window.location.href = "confirmation.php?" + query;
         }
 
         // Mendapatkan nilai parameter hasil dari URL

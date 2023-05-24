@@ -87,11 +87,13 @@ class Autoload extends AutoloadConfig
      * -------------------------------------------------------------------
      * Prototype:
      *   $helpers = [
+     *       'url',
+     *       'html',
      *       'form',
      *   ];
      *
      * @var string[]
      * @phpstan-var list<string>
      */
-    public $helpers = [];
+    public $helpers = ['url', 'html'];
 }
