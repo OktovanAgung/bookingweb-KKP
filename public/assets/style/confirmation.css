@@ -1,0 +1,49 @@
+/* confirmation */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+    grid-column: 1;
+}
+
+.form {
+    padding: 20px;
+    grid-column: 3;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+    height: 100px;
+}
+
+.form button {
+    padding: 10px 20px;
+    margin-right: 10px;
+}
