@@ -97,6 +97,9 @@
 
             // Update tampilan bulan dan tahun saat ini
             currentMonthYear.textContent = getMonthName(currentMonth) + ' ' + currentYear;
+
+            // Tambahkan event listener untuk tombol-tombol tanggal
+            addDateButtonListeners();
         }
 
         // Fungsi untuk mendapatkan nama bulan berdasarkan indeks bulan (0-11)
@@ -128,16 +131,60 @@
             populateCalendarDates();
         }
 
+        // Fungsi untuk menampilkan hasil pemilihan tanggal
+        function showSelectedDate() {
+            var selectedDate = this.textContent;
+
+            var selectedDayIndex = new Date(currentYear, currentMonth, selectedDate).getDay();
+            var selectedDay = getDayName(selectedDayIndex);
+            var selectedMonth = getMonthName(currentMonth);
+            var selectedYear = currentYear;
+
+            var result = "Anda memilih tanggal: " + selectedDay + ", " + selectedDate + " " + selectedMonth + " " + selectedYear;
+            alert(result);
+        }
+
+        // Fungsi untuk mendapatkan nama hari berdasarkan indeks hari (0-6)
+        function getDayName(dayIndex) {
+            var days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+            return days[dayIndex];
+        }
+
+        // Fungsi untuk menambahkan event listener pada tombol-tombol tanggal
+        function addDateButtonListeners() {
+            var dateButtons = document.getElementsByClassName('date-button');
+            for (var i = 0; i < dateButtons.length; i++) {
+                dateButtons[i].addEventListener('click', showSelectedDate);
+            }
+        }
+
         // Pemanggilan fungsi pertama kali untuk mengisi tanggal dan tampilan bulan dan tahun
         populateCalendarDates();
 
         // Tambahkan event listener untuk tombol "Prev"
         var prevMonthButton = document.getElementById('prevMonthButton');
-        prevMonthButton.addEventListener('click', goToPrevMonth);
+        prevMonthButton.addEventListener('click', function() {
+            // Hapus event listener pada tombol-tombol tanggal sebelum mengubah bulan
+            removeDateButtonListeners();
+            goToPrevMonth();
+        });
 
         // Tambahkan event listener untuk tombol "Next"
         var nextMonthButton = document.getElementById('nextMonthButton');
-        nextMonthButton.addEventListener('click', goToNextMonth);
+        nextMonthButton.addEventListener('click', function() {
+            // Hapus event listener pada tombol-tombol tanggal sebelum mengubah bulan
+            removeDateButtonListeners();
+            goToNextMonth();
+        });
+
+        // Fungsi untuk menghapus event listener pada tombol-tombol tanggal
+        function removeDateButtonListeners() {
+            var dateButtons = document.getElementsByClassName('date-button');
+            for (var i = 0; i < dateButtons.length; i++) {
+                var clonedButton = dateButtons[i].cloneNode(true);
+                dateButtons[i].parentNode.replaceChild(clonedButton, dateButtons[i]);
+            }
+        }
     </script>
 </body>
 
