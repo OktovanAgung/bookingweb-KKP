@@ -1,71 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url('assets/style/calender.css') ?>">
     <title>Datepicker</title>
-    <style>
-        .container {
-            width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid black;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .date-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .selected {
-            background-color: #f0f0f0;
-        }
-
-        .month-year-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .month-dropdown,
-        .year-dropdown {
-            width: 150px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="month-year-container">
-            <select id="monthDropdown" class="month-dropdown">
-                <option value="0">Januari</option>
-                <option value="1">Februari</option>
-                <option value="2">Maret</option>
-                <option value="3">April</option>
-                <option value="4">Mei</option>
-                <option value="5">Juni</option>
-                <option value="6">Juli</option>
-                <option value="7">Agustus</option>
-                <option value="8">September</option>
-                <option value="9">Oktober</option>
-                <option value="10">November</option>
-                <option value="11">Desember</option>
-            </select>
-            <select id="yearDropdown" class="year-dropdown"></select>
+            <h2 id="currentMonthYear"></h2>
+            <div class="button-container">
+                <button id="prevMonthButton" class="month-button">&#60;</button>
+                <button id="nextMonthButton" class="month-button">&#62;</button>
+            </div>
         </div>
         <table>
             <tr>
@@ -94,6 +45,8 @@
             var startDay = startDate.getDay(); // Hari awal bulan (0-6, 0: Minggu, 1: Senin, dst.)
             var endDay = endDate.getDate(); // Jumlah tanggal dalam bulan
 
+            var prevMonthEndDate = new Date(currentYear, currentMonth, 0).getDate(); // Tanggal akhir bulan sebelumnya
+
             var date = 1; // Penomeran tanggal pada kalender
             var numRows = Math.ceil((endDay + startDay) / 7); // Jumlah baris yang diperlukan
 
@@ -109,8 +62,23 @@
                     var button = document.createElement('button');
                     button.classList.add('date-button');
 
+                    // Jika sebelum tanggal 1 bulan saat ini
+                    if (i === 0 && j < startDay) {
+                        var prevMonthDate = prevMonthEndDate - (startDay - j - 1);
+                        button.textContent = prevMonthDate;
+                        button.disabled = true; // Tambahkan properti disabled pada tombol
+                        cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
+                    }
+                    // Jika setelah tanggal akhir bulan saat ini
+                    else if (date > endDay) {
+                        var nextMonthDate = date - endDay;
+                        button.textContent = nextMonthDate;
+                        button.disabled = true; // Tambahkan properti disabled pada tombol
+                        cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
+                        date++;
+                    }
                     // Tambahkan penomeran tanggal jika berada dalam rentang tanggal bulan saat ini
-                    if ((i === 0 && j >= startDay) || (i > 0 && date <= endDay)) {
+                    else {
                         button.textContent = date;
                         date++;
                     }
@@ -125,53 +93,51 @@
                 // Tambahkan baris ke dalam tbody
                 dateBody.appendChild(row);
             }
+
+            // Update tampilan bulan dan tahun saat ini
+            var currentMonthYear = document.getElementById('currentMonthYear');
+            currentMonthYear.textContent = getMonthName(currentMonth) + ' ' + currentYear;
         }
 
-        // Fungsi untuk memperbarui tampilan bulan dan tahun
-        function updateMonthYear() {
-            var monthDropdown = document.getElementById('monthDropdown');
-            monthDropdown.value = currentMonth;
-
-            var yearDropdown = document.getElementById('yearDropdown');
-            yearDropdown.value = currentYear;
-
-            populateYearDropdown();
+        // Fungsi untuk mendapatkan nama bulan berdasarkan indeks bulan (0-11)
+        function getMonthName(monthIndex) {
+            var months = [
+                'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+                'Agustus', 'September', 'Oktober', 'November', 'Desember'
+            ];
+            return months[monthIndex];
         }
 
-        // Fungsi untuk mengisi opsi tahun pada dropdown tahun
-        function populateYearDropdown() {
-            var yearDropdown = document.getElementById('yearDropdown');
-            yearDropdown.innerHTML = '';
-
-            var startYear = currentYear;
-            var endYear = currentYear + 2;
-
-            for (var year = startYear; year <= endYear; year++) {
-                var option = document.createElement('option');
-                option.value = year;
-                option.textContent = year;
-                yearDropdown.appendChild(option);
+        // Fungsi untuk memperbarui bulan saat ini ke bulan sebelumnya
+        function goToPrevMonth() {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
             }
+            populateCalendarDates();
         }
 
+        // Fungsi untuk memperbarui bulan saat ini ke bulan berikutnya
+        function goToNextMonth() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            populateCalendarDates();
+        }
 
         // Pemanggilan fungsi pertama kali untuk mengisi tanggal dan tampilan bulan dan tahun
         populateCalendarDates();
-        updateMonthYear();
 
-        // Tambahkan event listener untuk dropdown bulan
-        var monthDropdown = document.getElementById('monthDropdown');
-        monthDropdown.addEventListener('change', function() {
-            currentMonth = parseInt(this.value);
-            populateCalendarDates();
-        });
+        // Tambahkan event listener untuk tombol "Prev"
+        var prevMonthButton = document.getElementById('prevMonthButton');
+        prevMonthButton.addEventListener('click', goToPrevMonth);
 
-        // Tambahkan event listener untuk dropdown tahun
-        var yearDropdown = document.getElementById('yearDropdown');
-        yearDropdown.addEventListener('change', function() {
-            currentYear = parseInt(this.value);
-            populateCalendarDates();
-        });
+        // Tambahkan event listener untuk tombol "Next"
+        var nextMonthButton = document.getElementById('nextMonthButton');
+        nextMonthButton.addEventListener('click', goToNextMonth);
     </script>
 </body>
 

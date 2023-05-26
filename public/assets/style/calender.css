@@ -1,0 +1,55 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    height: 355px;
+    /* Tinggi tetap untuk kotak luar */
+    overflow: auto;
+    /* Menambahkan bilah geser jika isi kalender melebihi tinggi tetap */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.date-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.month-year-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.month-button {
+    width: 100px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.disabled {
+    color: #999;
+}
+
+.selected {
+    background-color: #f0f0f0;
+}
