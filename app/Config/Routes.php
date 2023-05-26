@@ -34,7 +34,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/booking', 'Schedule::booking');
 $routes->get('/confirmation', 'Confirmation::index');
-$routes->get('/testing', 'Page::testing');
+$routes->get('/calender', 'Calender::calender');
 
 
 /*

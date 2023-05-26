@@ -18,12 +18,6 @@
             <button class="button" onclick="toggleSelection('Hotel')">Hotel</button>
             <button class="button" onclick="toggleSelection('Grooming')">Grooming</button>
         </div>
-        <div class="center">
-            <div class="calendar">
-                <!-- Calendar content here -->
-                <input type="date" id="datepicker" onchange="selectDate()">
-            </div>
-        </div>
         <div class="right">
             <div id="selectedDate"></div>
             <div class="schedule">
@@ -52,14 +46,6 @@
             } else {
                 selectedButtons.splice(index, 1);
             }
-        }
-
-        function selectDate() {
-            selectedDate = document.getElementById("datepicker").value;
-            var selectedDay = new Date(selectedDate).toLocaleDateString('en-US', {
-                weekday: 'long'
-            });
-            document.getElementById("selectedDate").textContent = "Tanggal yang Dipilih: " + selectedDate + " (" + selectedDay + ")";
         }
 
         function selectTime(time) {

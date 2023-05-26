@@ -36,6 +36,8 @@
         var currentDate = new Date(); // Tanggal saat ini
         var currentMonth = currentDate.getMonth(); // Bulan saat ini (0-11)
         var currentYear = currentDate.getFullYear(); // Tahun saat ini
+        var dateBody = document.getElementById('dateBody');
+        var currentMonthYear = document.getElementById('currentMonthYear');
 
         // Fungsi untuk mengisi tanggal pada setiap tombol tanggal
         function populateCalendarDates() {
@@ -50,7 +52,6 @@
             var date = 1; // Penomeran tanggal pada kalender
             var numRows = Math.ceil((endDay + startDay) / 7); // Jumlah baris yang diperlukan
 
-            var dateBody = document.getElementById('dateBody');
             dateBody.innerHTML = ''; // Kosongkan isi tanggal
 
             // Loop untuk mengisi tanggal pada setiap sel
@@ -95,7 +96,6 @@
             }
 
             // Update tampilan bulan dan tahun saat ini
-            var currentMonthYear = document.getElementById('currentMonthYear');
             currentMonthYear.textContent = getMonthName(currentMonth) + ' ' + currentYear;
         }
 
