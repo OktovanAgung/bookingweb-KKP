@@ -1,12 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .container {
-    width: 400px;
+    width: 1100px;
+    height: 360px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sidebar {
+    width: 320px;
     border: 1px solid black;
-    height: 355px;
-    /* Tinggi tetap untuk kotak luar */
+    height: 100%;
+}
+
+.calendar-container {
+    width: 450px;
+    border: 1px solid black;
+    height: 100%;
     overflow: auto;
-    /* Menambahkan bilah geser jika isi kalender melebihi tinggi tetap */
 }
 
 table {
@@ -16,7 +39,7 @@ table {
 
 th,
 td {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 10px;
     text-align: center;
 }
@@ -29,21 +52,21 @@ td {
 
 .month-year-container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     margin-bottom: 10px;
 }
+
+#currentMonthYear {
+    margin-right: 140px;
+    margin-left: 5px;
+}
+
 
 .month-button {
     width: 100px;
     font-size: 16px;
     cursor: pointer;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
 }
 
 .disabled {

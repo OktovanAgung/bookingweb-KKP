@@ -9,6 +9,7 @@ body {
 
 .container {
     width: 600px;
+    height: 360px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
