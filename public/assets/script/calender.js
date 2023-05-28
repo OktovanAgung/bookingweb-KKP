@@ -3,6 +3,7 @@ var currentMonth = currentDate.getMonth(); // Bulan saat ini (0-11)
 var currentYear = currentDate.getFullYear(); // Tahun saat ini
 var dateBody = document.getElementById('dateBody');
 var currentMonthYear = document.getElementById('currentMonthYear');
+var selectedDate = null;
 
 // Fungsi untuk mengisi tanggal pada setiap tombol tanggal
 function populateCalendarDates() {
@@ -96,15 +97,6 @@ function goToNextMonth() {
     populateCalendarDates();
 }
 
-// Fungsi untuk menampilkan hasil pemilihan tanggal
-function showSelectedDate() {
-    var selectedDate = this.textContent;
-
-    var selectedDayIndex = new Date(currentYear, currentMonth, selectedDate).getDay();
-    var selectedDay = getDayName(selectedDayIndex);
-    var selectedMonth = getMonthName(currentMonth);
-    var selectedYear = currentYear;
-}
 
 // Fungsi untuk mendapatkan nama hari berdasarkan indeks hari (0-6)
 function getDayName(dayIndex) {
@@ -147,7 +139,21 @@ function removeDateButtonListeners() {
         dateButtons[i].parentNode.replaceChild(clonedButton, dateButtons[i]);
     }
 }
-// ___________________________________________________________________________________________________________________________________
+
+// Fungsi untuk menampilkan hasil pemilihan tanggal
+function showSelectedDate() {
+    selectedDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
+
+    var selectedDayIndex = new Date(currentYear, currentMonth, selectedDate).getDay();
+    var selectedDay = getDayName(selectedDayIndex);
+    var selectedMonth = getMonthName(currentMonth);
+    var selectedYear = currentYear;
+
+    var result = "Anda memilih tanggal: " + selectedDay + ", " + selectedDate + " " + selectedMonth + " " + selectedYear;
+}
+
+
+// _____________________________________________________________________________________________________________________________________________________________
 
 // Variable untuk menyimpan pilihan pengguna
 let selectedCategories = [];
@@ -176,17 +182,17 @@ function selectTime(time) {
 function showResults() {
     const resultElement = document.getElementById('result');
 
-    if (selectedCategories.length === 0 || !selectedTime) {
-        resultElement.textContent = 'Silakan pilih waktunya terlebih dahulu.';
+    if (selectedCategories.length === 0 || !selectedTime || !selectedDate) {
+        resultElement.textContent = 'Silakan pilih kategori, waktu, dan tanggal terlebih dahulu.';
     } else {
         let resultText = '';
 
         if (selectedCategories.length === 1) {
             var selectedButton = selectedCategories[0];
-            if (selectedButton === 'Dokter') {
-                resultText = 'Janji Temu Dokter';
+            if (selectedButton === 'Doktor') {
+                resultText = 'Janji temu Doktor';
             } else if (selectedButton === 'Hotel') {
-                resultText = 'Check In hotel';
+                resultText = 'Check in hotel';
             } else if (selectedButton === 'Grooming') {
                 resultText = 'Datang Grooming';
             }
@@ -194,8 +200,8 @@ function showResults() {
             var selectedButtonNames = [];
             for (var i = 0; i < selectedCategories.length; i++) {
                 var buttonName = selectedCategories[i];
-                if (buttonName === 'Dokter') {
-                    selectedButtonNames.push('Janji Temu Dokter');
+                if (buttonName === 'Doktor') {
+                    selectedButtonNames.push('Janji Temu Doktor');
                 } else if (buttonName === 'Hotel') {
                     selectedButtonNames.push('Check In Hotel');
                 } else if (buttonName === 'Grooming') {
@@ -211,11 +217,17 @@ function showResults() {
             }
         }
 
-        resultText += ' pada hari, pukul ' + selectedTime;
+        var selectedDayIndex = selectedDate.getDay();
+        var selectedDay = getDayName(selectedDayIndex);
+        var selectedMonth = getMonthName(selectedDate.getMonth());
+        var selectedYear = selectedDate.getFullYear();
+
+        resultText += ' pada hari ' + selectedDay + ', ' + selectedDate.getDate() + ' ' + selectedMonth + ' ' + selectedYear + ', pukul ' + selectedTime;
 
         resultElement.textContent = resultText;
     }
 }
+
 
 // Fungsi untuk menghapus histori pilihan
 function clearSelections() {
