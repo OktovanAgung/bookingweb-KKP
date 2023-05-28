@@ -42,6 +42,9 @@
         </div>
 
         <div class="right-sidebar">
+            <div class="selected-date-container">
+                <div id="selectedDate"></div>
+            </div>
             <div class="time">
                 <?php
                 $times = array(
@@ -52,13 +55,14 @@
                     '15:00', '15:15', '15:30', '15:45',
                     '16:00'
                 );
-
                 foreach ($times as $time) {
                     echo '<button class="button" onclick="selectTime(\'' . $time . '\')">' . $time . '</button>';
                 }
                 ?>
             </div>
         </div>
+
+
     </div>
 
     <div class="button-bottom-container">

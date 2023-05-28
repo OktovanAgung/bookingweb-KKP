@@ -144,12 +144,13 @@ function removeDateButtonListeners() {
 function showSelectedDate() {
     selectedDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
 
-    var selectedDayIndex = new Date(currentYear, currentMonth, selectedDate).getDay();
+    var selectedDayIndex = selectedDate.getDay();
     var selectedDay = getDayName(selectedDayIndex);
     var selectedMonth = getMonthName(currentMonth);
     var selectedYear = currentYear;
 
-    var result = "Anda memilih tanggal: " + selectedDay + ", " + selectedDate + " " + selectedMonth + " " + selectedYear;
+    var selectedDateContainer = document.querySelector('.selected-date-container');
+    selectedDateContainer.textContent = selectedDay + ", " + selectedDate.getDate() + " " + selectedMonth + " " + selectedYear;
 }
 
 
