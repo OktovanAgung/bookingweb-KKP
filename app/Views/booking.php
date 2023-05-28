@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('assets/style/schedule.css') ?>">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <title>Schedule</title>
 </head>
 
@@ -27,12 +28,18 @@
                 <button class="button" onclick="selectTime('10:30')">10:30</button>
                 <!-- Add more buttons with different time slots -->
             </div>
+            <div class="datepicker-container">
+                <input type="text" id="datepicker" placeholder="Pilih Tanggal" readonly>
+            </div>
         </div>
     </div>
 
     <div id="result"></div>
 
     <button id="submitBtn" onclick="showFinalResult()">Tampilkan Hasil</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
     <script>
         var selectedButtons = [];
@@ -92,6 +99,16 @@
             // Mengirim hasil ke halaman confirmation
             window.location.href = "confirmation?hasil=" + encodeURIComponent(output);
         }
+
+        $(function() {
+            $("#datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                onSelect: function(dateText, inst) {
+                    selectedDate = dateText;
+                    $("#selectedDate").text("Tanggal Terpilih: " + selectedDate);
+                }
+            });
+        });
     </script>
 </body>
 

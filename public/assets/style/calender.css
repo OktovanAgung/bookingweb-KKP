@@ -1,28 +1,23 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
+/* Outerbox */
 .container {
-    width: 1100px;
+    width: 1000px;
     height: 360px;
     margin: 0 auto;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
 
 }
 
-.sidebar {
-    width: 320px;
-    border: 1px solid black;
-    height: 100%;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .calendar-container {
@@ -39,7 +34,6 @@ table {
 
 th,
 td {
-    /* border: 1px solid black; */
     padding: 10px;
     text-align: center;
 }
@@ -52,14 +46,18 @@ td {
 
 .month-year-container {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    margin-bottom: 10px;
+    width: 100%;
 }
 
 #currentMonthYear {
-    margin-right: 140px;
+    margin-right: 40px; /* Ubah margin-right sesuai kebutuhan */
     margin-left: 5px;
+    width: 800px; /* Tambahkan lebar tetap */
+}
+
+.button-container {
+    width: 900px; /* Tambahkan lebar tetap */
 }
 
 
@@ -75,4 +73,46 @@ td {
 
 .selected {
     background-color: #f0f0f0;
+}
+
+/* Sidebar Kiri */
+.left-sidebar {
+    width: 260px;
+    /* border: 1px solid black; */
+    height: 100%;
+    
+}
+
+.button {
+    display: block;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -90px;
+    margin-right: 5px;
+}
+
+/* Sidebar Kanan */
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.right-sidebar {
+    width: 260px;
+    /* border: 1px solid black; */
+    height: 100%;
+    overflow-y: auto;
 }

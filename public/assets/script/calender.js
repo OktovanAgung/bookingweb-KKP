@@ -104,9 +104,6 @@ function showSelectedDate() {
     var selectedDay = getDayName(selectedDayIndex);
     var selectedMonth = getMonthName(currentMonth);
     var selectedYear = currentYear;
-
-    var result = "Anda memilih tanggal: " + selectedDay + ", " + selectedDate + " " + selectedMonth + " " + selectedYear;
-    alert(result);
 }
 
 // Fungsi untuk mendapatkan nama hari berdasarkan indeks hari (0-6)
@@ -149,4 +146,81 @@ function removeDateButtonListeners() {
         var clonedButton = dateButtons[i].cloneNode(true);
         dateButtons[i].parentNode.replaceChild(clonedButton, dateButtons[i]);
     }
+}
+// ___________________________________________________________________________________________________________________________________
+
+// Variable untuk menyimpan pilihan pengguna
+let selectedCategories = [];
+let selectedTime = '';
+
+// Fungsi untuk mengatur pilihan kategori
+function toggleSelection(category) {
+    // Periksa apakah kategori sudah dipilih sebelumnya
+    const index = selectedCategories.indexOf(category);
+
+    if (index > -1) {
+        // Jika sudah dipilih, hapus dari array
+        selectedCategories.splice(index, 1);
+    } else {
+        // Jika belum dipilih, tambahkan ke array
+        selectedCategories.push(category);
+    }
+}
+
+// Fungsi untuk mengatur pilihan waktu
+function selectTime(time) {
+    selectedTime = time;
+}
+
+// Fungsi untuk menampilkan hasil pilihan pengguna
+function showResults() {
+    const resultElement = document.getElementById('result');
+
+    if (selectedCategories.length === 0 || !selectedTime) {
+        resultElement.textContent = 'Silakan pilih waktunya terlebih dahulu.';
+    } else {
+        let resultText = '';
+
+        if (selectedCategories.length === 1) {
+            var selectedButton = selectedCategories[0];
+            if (selectedButton === 'Dokter') {
+                resultText = 'Janji Temu Dokter';
+            } else if (selectedButton === 'Hotel') {
+                resultText = 'Check In hotel';
+            } else if (selectedButton === 'Grooming') {
+                resultText = 'Datang Grooming';
+            }
+        } else {
+            var selectedButtonNames = [];
+            for (var i = 0; i < selectedCategories.length; i++) {
+                var buttonName = selectedCategories[i];
+                if (buttonName === 'Dokter') {
+                    selectedButtonNames.push('Janji Temu Dokter');
+                } else if (buttonName === 'Hotel') {
+                    selectedButtonNames.push('Check In Hotel');
+                } else if (buttonName === 'Grooming') {
+                    selectedButtonNames.push('Datang Grooming');
+                }
+            }
+
+            if (selectedCategories.length === 2) {
+                resultText = selectedButtonNames.join(' dan ');
+            } else if (selectedCategories.length === 3) {
+                var lastButtonName = selectedButtonNames.pop();
+                resultText = selectedButtonNames.join(', ') + ' dan ' + lastButtonName;
+            }
+        }
+
+        resultText += ' pada hari, pukul ' + selectedTime;
+
+        resultElement.textContent = resultText;
+    }
+}
+
+// Fungsi untuk menghapus histori pilihan
+function clearSelections() {
+    selectedCategories = [];
+    selectedTime = '';
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = '';
 }

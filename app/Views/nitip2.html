@@ -1,0 +1,12 @@
+// Fungsi untuk menampilkan hasil pemilihan tanggal
+function showSelectedDate() {
+    var selectedDate = this.textContent;
+
+    var selectedDayIndex = new Date(currentYear, currentMonth, selectedDate).getDay();
+    var selectedDay = getDayName(selectedDayIndex);
+    var selectedMonth = getMonthName(currentMonth);
+    var selectedYear = currentYear;
+
+    var result = "Anda memilih tanggal: " + selectedDay + ", " + selectedDate + " " + selectedMonth + " " + selectedYear;
+    alert(result);
+}
