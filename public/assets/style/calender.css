@@ -115,6 +115,11 @@ td {
 .right-sidebar {
     width: 260px;
     height: 100%;
+    display: none; /* Menyembunyikan right-sidebar secara awal */
+}
+
+.right-sidebar.show {
+    display: block; /* Menampilkan right-sidebar saat kelas "show" ditambahkan */
 }
 
 .selected-date-container{
@@ -122,3 +127,17 @@ td {
     position: fixed;
     margin-top: 25px;
 }
+
+.button-bottom-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}   
+
+#result {
+    margin-bottom: 10px;
+}   

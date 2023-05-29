@@ -139,7 +139,6 @@ function removeDateButtonListeners() {
     }
 }
 
-// Fungsi untuk menampilkan hasil pemilihan tanggal
 function showSelectedDate() {
     selectedDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
 
@@ -149,8 +148,13 @@ function showSelectedDate() {
     var selectedYear = currentYear;
 
     var selectedDateContainer = document.querySelector('.selected-date-container');
-    selectedDateContainer.textContent = selectedDay + ", " + selectedDate.getDate() + " " + selectedMonth + " " + selectedYear;
+    selectedDateContainer.textContent = ""+ selectedDay + ", " + selectedDate.getDate() + " " + selectedMonth + " " + selectedYear;
+
+    // Tambahkan kode berikut untuk menampilkan right-sidebar saat tanggal dipilih
+    var rightSidebar = document.querySelector('.right-sidebar');
+    rightSidebar.classList.add('show');
 }
+
 
 // _____________________________________________________________________________________________________________________________________________________________
 
@@ -236,3 +240,4 @@ function clearSelections() {
 }
 
 // _____________________________________________________________________________________________________________________________________________________________
+

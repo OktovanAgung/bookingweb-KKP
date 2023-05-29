@@ -66,11 +66,11 @@
     </div>
 
     <div class="button-bottom-container">
+        <p id="result"></p>
         <button onclick="showResults()">Tampilkan Hasil</button>
         <button onclick="clearSelections()">Clear</button>
     </div>
 
-    <p id="result"></p>
 
     <script src="<?= base_url('assets/script/calender.js') ?>"></script>
 </body>
