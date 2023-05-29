@@ -97,7 +97,6 @@ function goToNextMonth() {
     populateCalendarDates();
 }
 
-
 // Fungsi untuk mendapatkan nama hari berdasarkan indeks hari (0-6)
 function getDayName(dayIndex) {
     var days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
@@ -152,7 +151,6 @@ function showSelectedDate() {
     var selectedDateContainer = document.querySelector('.selected-date-container');
     selectedDateContainer.textContent = selectedDay + ", " + selectedDate.getDate() + " " + selectedMonth + " " + selectedYear;
 }
-
 
 // _____________________________________________________________________________________________________________________________________________________________
 
@@ -229,7 +227,6 @@ function showResults() {
     }
 }
 
-
 // Fungsi untuk menghapus histori pilihan
 function clearSelections() {
     selectedCategories = [];
@@ -237,3 +234,5 @@ function clearSelections() {
     const resultElement = document.getElementById('result');
     resultElement.textContent = '';
 }
+
+// _____________________________________________________________________________________________________________________________________________________________

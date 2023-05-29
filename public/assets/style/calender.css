@@ -109,6 +109,7 @@ td {
     margin-top: 70px;
     max-height: calc(100% - 80px);
     overflow-y: auto;
+    position: static;
 }
 
 .right-sidebar {
@@ -118,4 +119,6 @@ td {
 
 .selected-date-container{
     color:black;
+    position: fixed;
+    margin-top: 25px;
 }
