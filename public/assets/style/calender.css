@@ -1,15 +1,14 @@
 /* Outerbox */
 .container {
-    width: 1000px;
     height: 360px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    align-items: flex-start;
 }
 
 body {
@@ -22,8 +21,8 @@ body {
 
 .calendar-container {
     width: 450px;
+    height: 358px;
     border: 1px solid black;
-    height: 100%;
     overflow: auto;
 }
 
@@ -80,6 +79,7 @@ td {
     width: 260px;
     /* border: 1px solid black; */
     height: 100%;
+    margin-right: 20px;
     
 }
 
@@ -126,6 +126,7 @@ td {
     color:black;
     position: fixed;
     margin-top: 25px;
+    margin-left: 20px;
 }
 
 .button-bottom-container {
