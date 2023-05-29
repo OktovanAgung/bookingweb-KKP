@@ -11,18 +11,6 @@
     align-items: flex-start;
 }
 
-.container::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #ccc;
-    margin-top: 20px;
-}
-
-.form {
-    margin-top: 20px;
-}
-
 body {
     display: flex;
     justify-content: center;
@@ -34,8 +22,8 @@ body {
 .calendar-container {
     width: 450px;
     height: 358px;
-    overflow: auto;
-    flex: 1;
+    margin-right: 20px;
+    /* border: 1px solid red; */
 }
 
 table {
@@ -93,7 +81,6 @@ td {
     margin-right: 20px;
     border-right: 1px solid #ccc;
     padding-right: 20px;
-    flex: 1;
 }
 
 .button {
@@ -131,7 +118,6 @@ td {
     display: none;
     border-left: 1px solid #ccc;
     padding-left: 20px;
-    flex: 1;
 }
 
 .right-sidebar.show {
@@ -142,7 +128,6 @@ td {
     color:black;
     position: fixed;
     margin-top: 25px;
-    margin-left: 20px;
 }
 
 .button-bottom-container {
