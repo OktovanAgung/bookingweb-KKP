@@ -68,7 +68,6 @@
     <div class="button-bottom-container">
         <p id="result"></p>
         <button onclick="showResults()">Tampilkan Hasil</button>
-        <button onclick="clearSelections()">Clear</button>
     </div>
 
 

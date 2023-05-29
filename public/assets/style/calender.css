@@ -119,7 +119,6 @@ td {
 .selected-date-container{
     color:black;
     position: static;
-    /* border: 1px solid black; */
     margin-top: 25px;
     text-align: center;
 }

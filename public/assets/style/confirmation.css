@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    width: 600px;
+    width: 602px;
     height: 360px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -26,19 +26,23 @@ body {
     margin-top: -90px;
 }
 
-.form {
+.right-side {
     padding: 20px;
     grid-column: 3;
 }
 
-.form input[type="text"] {
+.left-side{
+    border-right: 1px solid #ccc;
+}
+
+.right-side input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     resize: vertical;
 }
 
-.form textarea {
+.right-side textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -46,7 +50,7 @@ body {
     height: 100px;
 }
 
-.form button {
+.right-side button {
     padding: 10px 20px;
     margin-right: 10px;
 }

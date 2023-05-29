@@ -139,6 +139,8 @@ function removeDateButtonListeners() {
     }
 }
 
+// _____________________________________________________________________________________________________________________________________________________________
+
 function showSelectedDate() {
     selectedDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
 
@@ -154,7 +156,6 @@ function showSelectedDate() {
     var rightSidebar = document.querySelector('.right-sidebar');
     rightSidebar.classList.add('show');
 }
-
 
 // _____________________________________________________________________________________________________________________________________________________________
 
@@ -186,7 +187,6 @@ function showResults() {
     const resultElement = document.getElementById('result');
 
     if (selectedCategories.length === 0 || !selectedTime || !selectedDate) {
-        resultElement.textContent = 'Silakan pilih kategori, waktu, dan tanggal terlebih dahulu.';
     } else {
         let resultText = '';
 
@@ -227,20 +227,8 @@ function showResults() {
 
         resultText += ' pada hari ' + selectedDay + ', ' + selectedDate.getDate() + ' ' + selectedMonth + ' ' + selectedYear + ', pukul ' + selectedTime;
 
-        resultElement.textContent = resultText;
-
         var confirmationUrl = "confirmation?hasil=" + encodeURIComponent(resultText);
         window.location.href = confirmationUrl;
     }
 }
-
-// Fungsi untuk menghapus histori pilihan
-function clearSelections() {
-    selectedCategories = [];
-    selectedTime = '';
-    const resultElement = document.getElementById('result');
-    resultElement.textContent = '';
-}
-
-// _____________________________________________________________________________________________________________________________________________________________
 
