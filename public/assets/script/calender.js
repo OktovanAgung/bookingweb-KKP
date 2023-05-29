@@ -228,6 +228,9 @@ function showResults() {
         resultText += ' pada hari ' + selectedDay + ', ' + selectedDate.getDate() + ' ' + selectedMonth + ' ' + selectedYear + ', pukul ' + selectedTime;
 
         resultElement.textContent = resultText;
+
+        var confirmationUrl = "confirmation?hasil=" + encodeURIComponent(resultText);
+        window.location.href = confirmationUrl;
     }
 }
 

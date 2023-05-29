@@ -95,8 +95,6 @@
                     output = selectedButtonNamesString + " pada hari " + selectedDate + ", pukul " + selectedTime;
                 }
             }
-
-            // Mengirim hasil ke halaman confirmation
             window.location.href = "confirmation?hasil=" + encodeURIComponent(output);
         }
 
