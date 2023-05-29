@@ -11,6 +11,18 @@
     align-items: flex-start;
 }
 
+.container::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -22,8 +34,8 @@ body {
 .calendar-container {
     width: 450px;
     height: 358px;
-    border: 1px solid black;
     overflow: auto;
+    flex: 1;
 }
 
 table {
@@ -50,13 +62,13 @@ td {
 }
 
 #currentMonthYear {
-    margin-right: 40px; /* Ubah margin-right sesuai kebutuhan */
+    margin-right: 40px;
     margin-left: 5px;
-    width: 800px; /* Tambahkan lebar tetap */
+    width: 800px;
 }
 
 .button-container {
-    width: 900px; /* Tambahkan lebar tetap */
+    width: 900px;
 }
 
 
@@ -77,10 +89,11 @@ td {
 /* Sidebar Kiri */
 .left-sidebar {
     width: 260px;
-    /* border: 1px solid black; */
     height: 100%;
     margin-right: 20px;
-    
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    flex: 1;
 }
 
 .button {
@@ -115,11 +128,14 @@ td {
 .right-sidebar {
     width: 260px;
     height: 100%;
-    display: none; /* Menyembunyikan right-sidebar secara awal */
+    display: none;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    flex: 1;
 }
 
 .right-sidebar.show {
-    display: block; /* Menampilkan right-sidebar saat kelas "show" ditambahkan */
+    display: block;
 }
 
 .selected-date-container{

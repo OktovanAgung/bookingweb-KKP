@@ -33,34 +33,6 @@
         </div>
     </div>
 
-    <script>
-        function batal() {
-            // Kode aksi untuk tombol Batal
-        }
-
-        function konfirmasi() {
-            var nama = document.getElementById("nama").value;
-            var email = document.getElementById("email").value;
-            var catatan = document.getElementById("catatan").value;
-
-            // Mengirim data ke halaman confirmation
-            var urlParams = new URLSearchParams();
-            urlParams.append('hasil', hasil);
-            urlParams.append('nama', nama);
-            urlParams.append('email', email);
-            urlParams.append('catatan', catatan);
-
-            var query = urlParams.toString();
-            window.location.href = "confirmation.php?" + query;
-        }
-
-        // Mendapatkan nilai parameter hasil dari URL
-        var urlParams = new URLSearchParams(window.location.search);
-        var hasil = urlParams.get('hasil');
-
-        // Menampilkan hasil di halaman konfirmasi
-        document.getElementById("result").textContent = hasil;
-    </script>
 </body>
 
 </html>
