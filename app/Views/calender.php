@@ -13,10 +13,16 @@
     <div class="container">
         <div class="left-sidebar">
             <div class="logo">
-                <img src="/assets/img/logo.png" alt="Logo" width="244.29" height="244.29">
+                <img src="/assets/img/logo.png" alt="Logo">
+            </div>
+            <div class="service-button">
                 <button class="button" onclick="toggleSelection('Doktor')">Doktor</button>
                 <button class="button" onclick="toggleSelection('Hotel')">Hotel</button>
                 <button class="button" onclick="toggleSelection('Grooming')">Grooming</button>
+            </div>
+            <div class="sosmed">
+                <img src="/assets/img/ig_logo.png" alt="Logo">
+                <img src="/assets/img/whatsapp_logo.png" alt="Logo">
             </div>
         </div>
         <div class="calendar-container">

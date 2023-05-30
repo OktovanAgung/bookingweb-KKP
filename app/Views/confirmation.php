@@ -13,9 +13,9 @@
     <div class="container">
         <div class="left-side">
             <div class="logo">
-                <img src="/assets/img/logo.png" alt="Logo" width="244.29" height="244.29">
-                <div id="result"></div>
+                <img src="/assets/img/logo.png" alt="Logo">
             </div>
+            <div id="result"></div>
         </div>
 
         <div class="right-side">
@@ -45,13 +45,6 @@
     function batal() {
         window.location.href = "calender";
     }
-
-    window.onload = function() {
-        var urlParams = new URLSearchParams(window.location.search);
-        var hasil = urlParams.get('hasil');
-        var resultElement = document.getElementById('result');
-        resultElement.textContent = hasil;
-    };
 </script>
 
 </html>

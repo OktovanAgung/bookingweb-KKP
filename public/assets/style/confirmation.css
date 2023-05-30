@@ -26,6 +26,11 @@ body {
     margin-top: -90px;
 }
 
+.logo img {
+    width: 244.29px; 
+    height: 244.29px;
+}
+
 .right-side {
     padding: 20px;
     grid-column: 3;
@@ -53,4 +58,8 @@ body {
 .right-side button {
     padding: 10px 20px;
     margin-right: 10px;
+}
+
+#result {
+    text-align: left;
 }
