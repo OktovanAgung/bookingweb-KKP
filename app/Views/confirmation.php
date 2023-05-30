@@ -16,18 +16,34 @@
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
             <div id="result"></div>
+            <div class="sosmed">
+                <div>
+                    <img src="/assets/img/maps_logo.png" alt="Logo">
+                    <a href="https://shorturl.at/lOTV5">Ruko Melawai, Jl. Metland Cibitung No.22</a>
+                </div>
+                <div>
+                    <img src="/assets/img/ig_logo.png" alt="Logo">
+                    <a href="https://www.instagram.com/sandio_petcare/">Instagram</a>
+                </div>
+                <div>
+                    <img src="/assets/img/whatsapp_logo.png" alt="Logo">
+                    <a href="https://www.instagram.com/sandio_petcare/">WhatsApp</a>
+                </div>
+            </div>
         </div>
 
         <div class="right-side">
-            <label for="nama">Nama Anda:</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Masukkan alamat email">
-            <label for="catatan">Catatan Tambahan:</label>
-            <textarea id="catatan" name="catatan" placeholder="Masukkan catatan tambahan"></textarea>
-            <div class="buttons">
-                <button type="button" onclick="batal()">Batal</button>
-                <button type="button" onclick="konfirmasi()">Konfirmasi</button>
+            <div class="form">
+                <label for="nama">Nama Anda:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Masukkan alamat email">
+                <label for="catatan">Catatan Tambahan:</label>
+                <textarea id="catatan" name="catatan" placeholder="Masukkan catatan tambahan"></textarea>
+            </div>
+            <div class="right-button">
+                <button class="button1" onclick="batal()">Batal</button>
+                <button class="button2" onclick="konfirmasi()">Konfirmasi</button>
             </div>
         </div>
     </div>

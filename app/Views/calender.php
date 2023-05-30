@@ -21,8 +21,18 @@
                 <button class="button" onclick="toggleSelection('Grooming')">Grooming</button>
             </div>
             <div class="sosmed">
-                <img src="/assets/img/ig_logo.png" alt="Logo">
-                <img src="/assets/img/whatsapp_logo.png" alt="Logo">
+                <div>
+                    <img src="/assets/img/maps_logo.png" alt="Logo">
+                    <a href="https://shorturl.at/lOTV5">Ruko Melawai, Jl. Metland Cibitung No.22</a>
+                </div>
+                <div>
+                    <img src="/assets/img/ig_logo.png" alt="Logo">
+                    <a href="https://www.instagram.com/sandio_petcare/">Instagram</a>
+                </div>
+                <div>
+                    <img src="/assets/img/whatsapp_logo.png" alt="Logo">
+                    <a href="https://www.instagram.com/sandio_petcare/">WhatsApp</a>
+                </div>
             </div>
         </div>
         <div class="calendar-container">

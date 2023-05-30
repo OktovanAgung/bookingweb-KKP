@@ -173,6 +173,13 @@ function toggleSelection(category) {
         // Jika belum dipilih, tambahkan ke array
         selectedCategories.push(category);
     }
+
+    var buttons = document.querySelectorAll('.button');
+    buttons.forEach(function(button) {
+        if (button.textContent === category) {
+            button.classList.toggle('active');
+        }
+    });
 }
 
 // Fungsi untuk mengatur pilihan waktu
