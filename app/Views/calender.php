@@ -61,15 +61,7 @@
                 ?>
             </div>
         </div>
-
-
     </div>
-
-    <div class="button-bottom-container">
-        <p id="result"></p>
-        <button onclick="showResults()">Tampilkan Hasil</button>
-    </div>
-
 
     <script src="<?= base_url('assets/script/calender.js') ?>"></script>
 </body>

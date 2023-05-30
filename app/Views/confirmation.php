@@ -41,6 +41,17 @@
         var resultElement = document.getElementById('result');
         resultElement.textContent = hasil;
     };
+
+    function batal() {
+        window.location.href = "calender";
+    }
+
+    window.onload = function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var hasil = urlParams.get('hasil');
+        var resultElement = document.getElementById('result');
+        resultElement.textContent = hasil;
+    };
 </script>
 
 </html>

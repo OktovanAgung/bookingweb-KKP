@@ -157,8 +157,6 @@ function showSelectedDate() {
     rightSidebar.classList.add('show');
 }
 
-// _____________________________________________________________________________________________________________________________________________________________
-
 // Variable untuk menyimpan pilihan pengguna
 let selectedCategories = [];
 let selectedTime = '';
@@ -180,7 +178,14 @@ function toggleSelection(category) {
 // Fungsi untuk mengatur pilihan waktu
 function selectTime(time) {
     selectedTime = time;
+
+    // Cek apakah kategori dan tanggal sudah dipilih
+    if (selectedCategories.length > 0 && selectedDate) {
+        // Redirect ke halaman konfirmasi dengan hasil pilihan
+        showResults();
+    }
 }
+
 
 // Fungsi untuk menampilkan hasil pilihan pengguna
 function showResults() {
@@ -231,4 +236,3 @@ function showResults() {
         window.location.href = confirmationUrl;
     }
 }
-
