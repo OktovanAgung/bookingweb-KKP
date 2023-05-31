@@ -37,11 +37,13 @@
         </div>
         <div class="calendar-container">
             <div class="month-year-container">
+                <button id="prevMonthButton" class="month-button">
+                    <img src="/assets/img/left.png" alt="left">
+                </button>
                 <h2 id="currentMonthYear"></h2>
-                <div class="button-container">
-                    <button id="prevMonthButton" class="month-button">&#60;</button>
-                    <button id="nextMonthButton" class="month-button">&#62;</button>
-                </div>
+                <button id="nextMonthButton" class="month-button">
+                    <img src="/assets/img/right.png" alt="right">
+                </button>
             </div>
             <table>
                 <tr>
