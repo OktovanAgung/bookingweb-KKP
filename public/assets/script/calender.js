@@ -5,8 +5,8 @@ var dateBody = document.getElementById('dateBody');
 var currentMonthYear = document.getElementById('currentMonthYear');
 var selectedDate = null;
 
-// Fungsi untuk mengisi tanggal pada setiap tombol tanggal
 function populateCalendarDates() {
+    var today = new Date(); // Tanggal hari ini
     var startDate = new Date(currentYear, currentMonth, 1); // Tanggal awal bulan
     var endDate = new Date(currentYear, currentMonth + 1, 0); // Tanggal akhir bulan
 
@@ -44,6 +44,13 @@ function populateCalendarDates() {
                 cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
                 date++;
             }
+            // Jika tanggal telah lewat dari tanggal hari ini
+            else if (currentYear < today.getFullYear() || (currentYear === today.getFullYear() && currentMonth < today.getMonth()) || (currentYear === today.getFullYear() && currentMonth === today.getMonth() && date < today.getDate())) {
+                button.textContent = date;
+                button.disabled = true; // Tambahkan properti disabled pada tombol
+                cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
+                date++;
+            }
             // Tambahkan penomeran tanggal jika berada dalam rentang tanggal bulan saat ini
             else {
                 button.textContent = date;
@@ -67,6 +74,7 @@ function populateCalendarDates() {
     // Tambahkan event listener untuk tombol-tombol tanggal
     addDateButtonListeners();
 }
+
 
 // Fungsi untuk mendapatkan nama bulan berdasarkan indeks bulan (0-11)
 function getMonthName(monthIndex) {

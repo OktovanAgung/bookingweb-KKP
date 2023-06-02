@@ -39,10 +39,28 @@ td {
 }
 
 .date-button {
-    background: none;
     border: none;
-    cursor: pointer;
-    /* border: 1px solid black; */
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.date-button:hover {
+    outline: 2px solid black; /* Garis luar berwarna hitam saat dihover */
+}
+
+.disabled {
+    color: #999;
+}
+
+.selected {
+    background-color: #f0f0f0;
+}
+
+.month-button img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .month-year-container {
@@ -71,19 +89,6 @@ td {
     cursor: pointer;
     /* border: 1px solid black; */
     border: 1px solid white;
-}
-
-.month-button img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.disabled {
-    color: #999;
-}
-
-.selected {
-    background-color: #f0f0f0;
 }
 
 .left-sidebar {
