@@ -54,6 +54,12 @@ function populateCalendarDates() {
             // Tambahkan penomeran tanggal jika berada dalam rentang tanggal bulan saat ini
             else {
                 button.textContent = date;
+                if (currentYear < today.getFullYear() || (currentYear === today.getFullYear() && currentMonth < today.getMonth()) || (currentYear === today.getFullYear() && currentMonth === today.getMonth() && date < today.getDate())) {
+                    button.disabled = true; // Tambahkan properti disabled pada tombol
+                    cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
+                } else {
+                    button.classList.add('current-date-button'); // Tambahkan class 'current-date-button' pada tombol tanggal saat ini dan seterusnya
+                }
                 date++;
             }
 

@@ -1,5 +1,5 @@
 .container {
-    height: 360px;
+    height: 420px;
     margin: 0 auto;
     padding: 20px;
     border: 2px solid rgb(212, 93, 0);
@@ -21,7 +21,7 @@ body {
 
 .calendar-container {
     width: 450px;
-    height: 358px;
+    height: 410px;
     margin-right: 20px;
     border-radius: 20px;
     background-color: white;
@@ -44,18 +44,11 @@ td {
     padding: 8px;
     width: 100%;
     text-align: center;
+    
 }
 
 .date-button:hover {
-    outline: 2px solid black; /* Garis luar berwarna hitam saat dihover */
-}
-
-.disabled {
-    color: #999;
-}
-
-.selected {
-    background-color: #f0f0f0;
+    outline: 2px solid black;
 }
 
 .month-button img {
