@@ -36,8 +36,8 @@
             <div class="form">
                 <label for="nama">Nama Anda:</label>
                 <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" placeholder="Masukkan alamat email">
+                <label for="email">Whatsapp:</label>
+                <input type="text" id="email" name="email" placeholder="Masukkan No. Whatsaap Anda">
                 <label for="catatan">Catatan Tambahan:</label>
                 <textarea id="catatan" name="catatan" placeholder="Masukkan catatan tambahan"></textarea>
             </div>

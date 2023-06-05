@@ -44,7 +44,7 @@ td {
     padding: 8px;
     width: 100%;
     text-align: center;
-    
+
 }
 
 .date-button:hover {
@@ -67,7 +67,7 @@ td {
     width: 300px;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     /* border: 1px solid black; */
 }
 
@@ -109,15 +109,17 @@ td {
     margin-top: -90px;
     margin-right: 5px;
 }
+
 .logo img {
-    width: 244.29px; 
+    width: 244.29px;
     height: 244.29px;
 }
 
 .sosmed {
     display: flex;
     flex-direction: column;
-    margin-top: -3px;
+    margin-top: 39px;
+    border: 1px solid black;
 }
 
 .sosmed div {
@@ -141,10 +143,10 @@ a {
 a:hover,
 a:visited {
     color: black;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-.service-button{
+.service-button {
     text-align: center;
     padding: 20px;
     display: flex;
@@ -164,12 +166,12 @@ a:visited {
     overflow-y: auto;
 }
 
-.selected-date-container{
-    color:black;
+.selected-date-container {
+    color: black;
     position: static;
     margin-top: 25px;
     text-align: center;
-}   
+}
 
 .right-sidebar.show {
     display: block;
@@ -190,13 +192,13 @@ a:visited {
     text-align: center;
 }
 
-  /* Button hover state */
+/* Button hover state */
 .button:hover {
     background-color: rgb(221, 153, 221);
     border-color: rgb(221, 153, 221);
 }
 
-  /* Button active state */
+/* Button active state */
 .button.active {
     background-color: rgb(151, 71, 255);
     border-color: rgb(151, 71, 255);
