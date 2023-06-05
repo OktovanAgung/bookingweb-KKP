@@ -5,8 +5,8 @@ var dateBody = document.getElementById('dateBody');
 var currentMonthYear = document.getElementById('currentMonthYear');
 var selectedDate = null;
 
-// Fungsi untuk mengisi tanggal pada setiap tombol tanggal
 function populateCalendarDates() {
+    var today = new Date(); // Tanggal hari ini
     var startDate = new Date(currentYear, currentMonth, 1); // Tanggal awal bulan
     var endDate = new Date(currentYear, currentMonth + 1, 0); // Tanggal akhir bulan
 
@@ -44,9 +44,22 @@ function populateCalendarDates() {
                 cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
                 date++;
             }
+            // Jika tanggal telah lewat dari tanggal hari ini
+            else if (currentYear < today.getFullYear() || (currentYear === today.getFullYear() && currentMonth < today.getMonth()) || (currentYear === today.getFullYear() && currentMonth === today.getMonth() && date < today.getDate())) {
+                button.textContent = date;
+                button.disabled = true; // Tambahkan properti disabled pada tombol
+                cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
+                date++;
+            }
             // Tambahkan penomeran tanggal jika berada dalam rentang tanggal bulan saat ini
             else {
                 button.textContent = date;
+                if (currentYear < today.getFullYear() || (currentYear === today.getFullYear() && currentMonth < today.getMonth()) || (currentYear === today.getFullYear() && currentMonth === today.getMonth() && date < today.getDate())) {
+                    button.disabled = true; // Tambahkan properti disabled pada tombol
+                    cell.classList.add('disabled'); // Tambahkan class 'disabled' pada sel
+                } else {
+                    button.classList.add('current-date-button'); // Tambahkan class 'current-date-button' pada tombol tanggal saat ini dan seterusnya
+                }
                 date++;
             }
 
@@ -67,6 +80,7 @@ function populateCalendarDates() {
     // Tambahkan event listener untuk tombol-tombol tanggal
     addDateButtonListeners();
 }
+
 
 // Fungsi untuk mendapatkan nama bulan berdasarkan indeks bulan (0-11)
 function getMonthName(monthIndex) {
@@ -96,7 +110,6 @@ function goToNextMonth() {
     }
     populateCalendarDates();
 }
-
 
 // Fungsi untuk mendapatkan nama hari berdasarkan indeks hari (0-6)
 function getDayName(dayIndex) {
@@ -139,139 +152,3 @@ function removeDateButtonListeners() {
         dateButtons[i].parentNode.replaceChild(clonedButton, dateButtons[i]);
     }
 }
-
-// Fungsi untuk menampilkan hasil pemilihan tanggal
-function showSelectedDate() {
-    selectedDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
-
-    var selectedDayIndex = new Date(currentYear, currentMonth, selectedDate).getDay();
-    var selectedDay = getDayName(selectedDayIndex);
-    var selectedMonth = getMonthName(currentMonth);
-    var selectedYear = currentYear;
-
-    var result = "Anda memilih tanggal: " + selectedDay + ", " + selectedDate + " " + selectedMonth + " " + selectedYear;
-}
-
-
-// _____________________________________________________________________________________________________________________________________________________________
-
-// Variable untuk menyimpan pilihan pengguna
-let selectedCategories = [];
-let selectedTime = '';
-
-// Fungsi untuk mengatur pilihan kategori
-function toggleSelection(category) {
-    // Periksa apakah kategori sudah dipilih sebelumnya
-    const index = selectedCategories.indexOf(category);
-
-    if (index > -1) {
-        // Jika sudah dipilih, hapus dari array
-        selectedCategories.splice(index, 1);
-    } else {
-        // Jika belum dipilih, tambahkan ke array
-        selectedCategories.push(category);
-    }
-}
-
-// Fungsi untuk mengatur pilihan waktu
-function selectTime(time) {
-    selectedTime = time;
-}
-
-// Fungsi untuk menampilkan hasil pilihan pengguna
-function showResults() {
-    const resultElement = document.getElementById('result');
-
-    if (selectedCategories.length === 0 || !selectedTime || !selectedDate) {
-        resultElement.textContent = 'Silakan pilih kategori, waktu, dan tanggal terlebih dahulu.';
-    } else {
-        let resultText = '';
-
-        if (selectedCategories.length === 1) {
-            var selectedButton = selectedCategories[0];
-            if (selectedButton === 'Doktor') {
-                resultText = 'Janji temu Doktor';
-            } else if (selectedButton === 'Hotel') {
-                resultText = 'Check in hotel';
-            } else if (selectedButton === 'Grooming') {
-                resultText = 'Datang Grooming';
-            }
-        } else {
-            var selectedButtonNames = [];
-            for (var i = 0; i < selectedCategories.length; i++) {
-                var buttonName = selectedCategories[i];
-                if (buttonName === 'Doktor') {
-                    selectedButtonNames.push('Janji Temu Doktor');
-                } else if (buttonName === 'Hotel') {
-                    selectedButtonNames.push('Check In Hotel');
-                } else if (buttonName === 'Grooming') {
-                    selectedButtonNames.push('Datang Grooming');
-                }
-            }
-
-            if (selectedCategories.length === 2) {
-                resultText = selectedButtonNames.join(' dan ');
-            } else if (selectedCategories.length === 3) {
-                var lastButtonName = selectedButtonNames.pop();
-                resultText = selectedButtonNames.join(', ') + ' dan ' + lastButtonName;
-            }
-        }
-
-        var selectedDayIndex = selectedDate.getDay();
-        var selectedDay = getDayName(selectedDayIndex);
-        var selectedMonth = getMonthName(selectedDate.getMonth());
-        var selectedYear = selectedDate.getFullYear();
-
-        resultText += ' pada hari ' + selectedDay + ', ' + selectedDate.getDate() + ' ' + selectedMonth + ' ' + selectedYear + ', pukul ' + selectedTime;
-
-        resultElement.textContent = resultText;
-    }
-}
-
-
-// Fungsi untuk menghapus histori pilihan
-function clearSelections() {
-    selectedCategories = [];
-    selectedTime = '';
-    const resultElement = document.getElementById('result');
-    resultElement.textContent = '';
-}
-
-
-
-/* Button default state */
-.button {
-    background-color: white;
-  }
-  
-  /* Button hover state */
-  .button:hover {
-    background-color: pink;
-  }
-  
-  /* Button active state */
-  .button.active {
-    background-color: red;
-  }
-  
-
-
-
-  .button {
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    border-radius: 10px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: rgb(221, 153, 221);
-    border-color: rgb(221, 153, 221);
-}
-
-.button:active {
-    background-color: rgb(151, 71, 255);
-}
-

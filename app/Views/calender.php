@@ -81,6 +81,7 @@
         </div>
     </div>
 
+    <script src="<?= base_url('assets/script/schedule.js') ?>"></script>
     <script src="<?= base_url('assets/script/calender.js') ?>"></script>
 </body>
 
