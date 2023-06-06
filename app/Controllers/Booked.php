@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 
-class Booking extends BaseController
+class Booked extends BaseController
 {
     public function index()
     {
-        return view('booking');
+        return view('booked');
     }
 }
