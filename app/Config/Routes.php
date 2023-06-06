@@ -36,6 +36,7 @@ $routes->get('/admin', 'Admin::index');
 $routes->get('/calender', 'Calender::calender');
 $routes->get('/confirmation', 'Confirmation::index');
 $routes->get('/booked', 'Booked::index');
+$routes->post('confirmation/confirm', 'ConfirmationController::confirm');
 
 
 /*

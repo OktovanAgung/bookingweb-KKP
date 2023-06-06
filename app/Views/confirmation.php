@@ -91,7 +91,23 @@
             }
 
             if (nama !== "" && nama_pet !== "" && whatsapp !== "") {
-                window.location.href = "booked";
+                // Kirim data ke server menggunakan AJAX
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "confirmation/confirm", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            window.location.href = "booked";
+                        } else {
+                            alert('Terjadi kesalahan saat mengirim data.');
+                        }
+                    }
+                };
+                xhr.send("nama=" + encodeURIComponent(nama) +
+                    "&nama_pet=" + encodeURIComponent(nama_pet) +
+                    "&whatsapp=" + encodeURIComponent(whatsapp) +
+                    "&catatan=" + encodeURIComponent(document.getElementById("notes").value));
             }
         }
 
