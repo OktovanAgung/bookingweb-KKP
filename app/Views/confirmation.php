@@ -34,23 +34,65 @@
 
         <div class="right-side">
             <div class="form">
-                <form action="<?= site_url('confirmation/insert_data') ?>" method="post">
+                <div class="nama">
                     <label for="nama">Nama Anda:</label>
-                    <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda">
-                    <label for="nama">Nama Hewan Peliharaan:</label>
-                    <input type="text" id="nama_pet" name="nama_pet" placeholder="Hewan Peliharaan Anda">
-                    <label for="whatsapp">Whatsapp:</label>
-                    <input type="text" id="whatsapp" name="whatsapp" placeholder="Masukkan No. Whatsapp Anda">
-                    <label for="catatan">Catatan Tambahan:</label>
-                    <textarea id="catatan" name="catatan" placeholder="Masukkan catatan tambahan*"></textarea>
-                    <button class="button2" onclick="konfirmasi()">Konfirmasi</button>
-                </form>
-                <button class="button1" onclick="batal()">Batal</button>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda" required>
+                </div>
+                <span id="namaError" class="error"></span>
+                <div class="hewan">
+                    <label for="nama_pet">Nama Hewan Peliharaan:</label>
+                    <input type="text" id="nama_pet" name="nama_pet" placeholder="Hewan Peliharaan Anda" required>
+                </div>
+                <span id="namaPetError" class="error"></span>
+                <div class="whatsapp">
+                    <label for="no_whatsapp">Whatsapp:</label>
+                    <input type="text" id="no_whatsapp" name="whatsapp" placeholder="Masukkan No. Whatsapp Anda" required>
+                </div>
+                <span id="whatsappError" class="error"></span>
+                <div class="catatan">
+                    <label for="notes">Catatan Tambahan:</label>
+                    <textarea id="notes" name="catatan" placeholder="Masukkan catatan tambahan*"></textarea>
+                </div>
+                <div class="right-button">
+                    <button class="button1" onclick="batal()">Batal</button>
+                    <button class="button2" onclick="validateForm()">Konfirmasi</button>
+
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        function validateForm() {
+            var nama = document.getElementById("nama").value;
+            var nama_pet = document.getElementById("nama_pet").value;
+            var whatsapp = document.getElementById("no_whatsapp").value;
+
+            var namaError = document.getElementById("namaError");
+            var namaPetError = document.getElementById("namaPetError");
+            var whatsappError = document.getElementById("whatsappError");
+
+            namaError.textContent = "";
+            namaPetError.textContent = "";
+            whatsappError.textContent = "";
+
+            if (nama === "") {
+                namaError.textContent = "Bagian ini diperlukan";
+            }
+
+            if (nama_pet === "") {
+                namaPetError.textContent = "Bagian ini diperlukan";
+            }
+
+            if (whatsapp === "") {
+                whatsappError.textContent = "Bagian ini diperlukan";
+            }
+
+            if (nama !== "" && nama_pet !== "" && whatsapp !== "") {
+                window.location.href = "booked";
+            }
+        }
+
         function batal() {
             window.location.href = "calender";
         }

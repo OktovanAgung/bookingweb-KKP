@@ -8,7 +8,7 @@ body {
 
 .container {
     width: 602px;
-    height: 420px;
+    height: 460px;
     padding: 20px;
     border: 2px solid rgb(212, 93, 0);
     border-radius: 20px;
@@ -60,6 +60,26 @@ border-color: #0066ff;
     width: 261px;
 }
 
+.nama,
+.hewan,
+.whatsapp{
+    height: 60px;
+}
+
+
+.error{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-bottom: 100px;
+}
+
+.right-button{
+    display: flex;
+    justify-content: right;
+    width: 281px;
+    border: 1px solid black;
+}
+
 .button1 {
     background-color: white;
     color: black;
@@ -68,9 +88,8 @@ border-color: #0066ff;
     font-size: 20px;
     cursor: pointer;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 175px;
-    margin-top: -27px;
+    margin-right: 115px;
+
 }
 
 .button2 {
@@ -81,9 +100,6 @@ border-color: #0066ff;
     font-size: 20px;
     cursor: pointer;
     display: flex;
-    justify-content: flex-end;
-    margin-left: 175px;
-    margin-top: 1px;
 }
 
 .button1:hover,
@@ -123,7 +139,7 @@ border-color: #0066ff;
 
 .sosmed {
     position: fixed;
-    margin-top: 54px;
+    margin-top: 94px;
     width: 228px;
     position: sticky;
     border: 1px solid black;
