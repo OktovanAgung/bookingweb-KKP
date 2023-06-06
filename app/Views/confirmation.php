@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="left-side">
             <div class="logo">
@@ -60,6 +61,7 @@
                 </div>
             </div>
         </div>
+        </form>
     </div>
 
     <script>
