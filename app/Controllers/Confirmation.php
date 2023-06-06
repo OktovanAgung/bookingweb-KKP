@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\PelangganModel;
 use CodeIgniter\Controller;
 
 class Confirmation extends BaseController
@@ -11,28 +12,29 @@ class Confirmation extends BaseController
         return view('confirmation');
     }
 
-    public function save()
+    public function insert_data()
     {
+        // Mengambil data dari form
         $nama = $this->request->getPost('nama');
-        $namaHewan = $this->request->getPost('nama_pet');
-        $whatsapp = $this->request->getPost('no_whatsapp');
-        $catatan = $this->request->getPost('notes');
+        $nama_pet = $this->request->getPost('nama_pet');
+        $no_whatsapp = $this->request->getPost('whatsapp');
+        $notes = $this->request->getPost('catatan');
+        // Anda dapat menambahkan data lain yang diperlukan dari form
 
-        $pelangganModel = new \App\Models\PelangganModel();
+        // Membuat instance model
+        $model = new PelangganModel();
 
+        // Menyimpan data ke database
         $data = [
             'nama' => $nama,
-            'no_whatsapp' => $whatsapp,
-            'nama_pet' => $namaHewan,
-            'notes' => $catatan
+            'nama_pet' => $nama_pet,
+            'no_whatsapp' => $no_whatsapp,
+            'notes' => $notes,
+            // Tambahkan data lain yang diperlukan
         ];
+        $model->insert($data);
 
-        $pelangganModel->insert($data);
-
-        if ($pelangganModel->affectedRows() > 0) {
-            echo "Data berhasil disimpan ke dalam database.";
-        } else {
-            echo "Terjadi kesalahan dalam menyimpan data.";
-        }
+        // Redirect ke halaman konfirmasi
+        return redirect()->to('booked');
     }
 }
