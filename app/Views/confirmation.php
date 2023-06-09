@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('assets/style/confirmation.css') ?>">
-    <title>Confirmation</title>
+    <title>Confrimation_Form</title>
 </head>
 
 <body>
-
     <div class="container">
         <div class="left-side">
             <div class="logo">
@@ -56,72 +55,15 @@
                 </div>
                 <div class="right-button">
                     <button class="button1" onclick="batal()">Batal</button>
-                    <button class="button2" onclick="validateForm()">Konfirmasi</button>
-
+                    <button class="button2" onclick="konfirmasi()">Konfirmasi</button>
                 </div>
             </div>
         </div>
-        </form>
     </div>
 
-    <script>
-        function validateForm() {
-            var nama = document.getElementById("nama").value;
-            var nama_pet = document.getElementById("nama_pet").value;
-            var whatsapp = document.getElementById("no_whatsapp").value;
 
-            var namaError = document.getElementById("namaError");
-            var namaPetError = document.getElementById("namaPetError");
-            var whatsappError = document.getElementById("whatsappError");
+    <script src="<?= base_url('assets/script/confirmation.js') ?>"></script>
 
-            namaError.textContent = "";
-            namaPetError.textContent = "";
-            whatsappError.textContent = "";
-
-            if (nama === "") {
-                namaError.textContent = "Bagian ini diperlukan";
-            }
-
-            if (nama_pet === "") {
-                namaPetError.textContent = "Bagian ini diperlukan";
-            }
-
-            if (whatsapp === "") {
-                whatsappError.textContent = "Bagian ini diperlukan";
-            }
-
-            if (nama !== "" && nama_pet !== "" && whatsapp !== "") {
-                // Kirim data ke server menggunakan AJAX
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", "confirmation/confirm", true);
-                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === XMLHttpRequest.DONE) {
-                        if (xhr.status === 200) {
-                            window.location.href = "booked";
-                        } else {
-                            alert('Terjadi kesalahan saat mengirim data.');
-                        }
-                    }
-                };
-                xhr.send("nama=" + encodeURIComponent(nama) +
-                    "&nama_pet=" + encodeURIComponent(nama_pet) +
-                    "&whatsapp=" + encodeURIComponent(whatsapp) +
-                    "&catatan=" + encodeURIComponent(document.getElementById("notes").value));
-            }
-        }
-
-        function batal() {
-            window.location.href = "calender";
-        }
-
-        window.onload = function() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var hasil = urlParams.get('hasil');
-            var resultElement = document.getElementById('result');
-            resultElement.textContent = hasil;
-        };
-    </script>
 </body>
 
 </html>
