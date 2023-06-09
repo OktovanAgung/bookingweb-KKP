@@ -35,7 +35,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/calender', 'Calender::calender');
 $routes->get('/confirmation', 'Confirmation::index');
-$routes->post('/confirmation/confirm', 'Confirmation::confirm');
+$routes->post('/confirmation/store', 'Confirmation::store');
 $routes->get('/booked', 'Booked::index');
 
 
