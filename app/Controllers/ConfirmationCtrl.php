@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\PelangganModel;
 
-class Confirmation extends BaseController
+class ConfirmationCtrl extends BaseController
 {
     public function index()
     {

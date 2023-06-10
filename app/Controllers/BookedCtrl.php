@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 
-class Booked extends BaseController
+class BookedCtrl extends BaseController
 {
     public function index()
     {
