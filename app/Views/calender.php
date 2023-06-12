@@ -85,6 +85,21 @@
         </div>
     </div>
 
+    <div class="container">
+        <h1>Pilihan Pengguna</h1>
+
+        <label for="category">Kategori:</label>
+        <input type="text" id="category" readonly>
+
+        <label for="date">Tanggal:</label>
+        <input type="text" id="date" readonly>
+
+        <label for="time">Waktu:</label>
+        <input type="text" id="time" readonly>
+
+        <button onclick="showResults()">Tampilkan Hasil</button>
+    </div>
+
 
 
     <script src="<?= base_url('assets/script/schedule.js') ?>"></script>

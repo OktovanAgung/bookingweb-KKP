@@ -12,10 +12,26 @@
 <body>
     <div class="container">
         <div class="left-side">
+
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
-            <div id="result"></div>
+
+            <div class="resulttext">
+                <div id="result"></div>
+
+            </div>
+
+            <div class="hasil">
+                <label for="category">Kategori:</label>
+                <input type="text" id="category" readonly>
+                <label for="date">Tanggal:</label>
+                <input type="text" id="date" readonly>
+                <label for="time">Waktu:</label>
+                <input type="text" id="time" readonly>
+                <button onclick="showResults()">Tampilkan Hasil</button>
+            </div>
+
             <div class="sosmed">
                 <div>
                     <img src="/assets/img/maps_logo.png" alt="Logo">
@@ -67,7 +83,6 @@
 
         </div>
     </div>
-
 
 
     <script src="<?= base_url('assets/script/confirmation.js') ?>"></script>

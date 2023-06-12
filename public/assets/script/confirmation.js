@@ -42,3 +42,23 @@ function konfirmasi() {
     // Jika validasi berhasil, submit form
     document.forms[0].submit();
 }
+// Ambil nilai dari parameter hasil pada URL
+const urlParams = new URLSearchParams(window.location.search);
+const hasil = urlParams.get('hasil');
+
+// Setel nilai input field dengan hasil pilihan
+const categoryInput = document.getElementById('category');
+const dateInput = document.getElementById('date');
+const timeInput = document.getElementById('time');
+
+// Memisahkan hasil menjadi kategori, tanggal, dan waktu
+const resultParts = hasil.split(' pada hari ');
+const kategori = resultParts[0];
+const tanggalWaktu = resultParts[1].split(', pukul ');
+const tanggal = tanggalWaktu[0];
+const waktu = tanggalWaktu[1];
+
+// Mengatur nilai input field dengan hasil pilihan
+categoryInput.value = kategori;
+dateInput.value = tanggal;
+timeInput.value = waktu;

@@ -5,23 +5,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('assets/style/booking.css') ?>">
-    <title>Booked</title>
+    <link rel="stylesheet" href="<?= base_url('assets/style/confirmation.css') ?>">
+    <title>Confrimation_Form</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="top-side">
+        <div class="left-side">
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
+            <div id="result"></div>
+            <div class="sosmed">
+                <div>
+                    <img src="/assets/img/maps_logo.png" alt="Logo">
+                    <a href="https://shorturl.at/lOTV5">Ruko Melawai, Jl. Metland Cibitung No.22</a>
+                </div>
+                <div>
+                    <img src="/assets/img/ig_logo.png" alt="Logo">
+                    <a href="https://www.instagram.com/sandio_petcare/">Instagram</a>
+                </div>
+                <div>
+                    <img src="/assets/img/whatsapp_logo.png" alt="Logo">
+                    <a href="https://www.instagram.com/sandio_petcare/">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side">
+
+            <form action="/confirmation/store" method="POST">
+                <div class="form">
+                    <div class="nama">
+                        <label for="nama">Nama Anda:</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda" required>
+                    </div>
+                    <span id="namaError" class="error"></span>
+
+                    <div class="hewan">
+                        <label for="nama_pet">Nama Hewan Peliharaan:</label>
+                        <input type="text" id="nama_pet" name="nama_pet" placeholder="Hewan Peliharaan Anda" required>
+                    </div>
+                    <span id="namaPetError" class="error"></span>
+
+                    <div class="whatsapp">
+                        <label for="no_whatsapp">Whatsapp:</label>
+                        <input type="text" id="no_whatsapp" name="whatsapp" placeholder="Masukkan No. Whatsapp Anda" required>
+                    </div>
+                    <span id="whatsappError" class="error"></span>
+
+                    <div class="catatan">
+                        <label for="notes">Catatan Tambahan:</label>
+                        <textarea id="notes" name="catatan" placeholder="Masukkan catatan tambahan*"></textarea>
+                    </div>
+                    <div class="right-button">
+                        <button class="button1" onclick="batal()">Batal</button>
+                        <button class="button2" onclick="konfirmasi()">Konfirmasi</button>
+                    </div>
+                </div>
+            </form>
 
         </div>
     </div>
 
 
 
+    <script src="<?= base_url('assets/script/confirmation.js') ?>"></script>
+
 </body>
 
-
 </html>
+
+<!--  -->
+
+// Fungsi untuk menampilkan hasil pilihan pengguna
+function showResults() {
+    const resultElement = document.getElementById('result');
+
+    if (selectedCategories.length === 0 || !selectedTime || !selectedDate) {
+    } else {
+        let resultText = '';
+
+        if (selectedCategories.length === 1) {
+            var selectedButton = selectedCategories[0];
+            if (selectedButton === 'Doktor') {
+                resultText = 'Janji temu Doktor';
+            } else if (selectedButton === 'Hotel') {
+                resultText = 'Check in hotel';
+            } else if (selectedButton === 'Grooming') {
+                resultText = 'Datang Grooming';
+            }
+        } else {
+            var selectedButtonNames = [];
+            for (var i = 0; i < selectedCategories.length; i++) {
+                var buttonName = selectedCategories[i];
+                if (buttonName === 'Doktor') {
+                    selectedButtonNames.push('Janji Temu Doktor');
+                } else if (buttonName === 'Hotel') {
+                    selectedButtonNames.push('Check In Hotel');
+                } else if (buttonName === 'Grooming') {
+                    selectedButtonNames.push('Datang Grooming');
+                }
+            }
+
+            if (selectedCategories.length === 2) {
+                resultText = selectedButtonNames.join(' dan ');
+            } else if (selectedCategories.length === 3) {
+                var lastButtonName = selectedButtonNames.pop();
+                resultText = selectedButtonNames.join(', ') + ' dan ' + lastButtonName;
+            }
+        }
+
+        var selectedDayIndex = selectedDate.getDay();
+        var selectedDay = getDayName(selectedDayIndex);
+        var selectedMonth = getMonthName(selectedDate.getMonth());
+        var selectedYear = selectedDate.getFullYear();
+
+        resultText += ' pada hari ' + selectedDay + ', ' + selectedDate.getDate() + ' ' + selectedMonth + ' ' + selectedYear + ', pukul ' + selectedTime;
+
+        var confirmationUrl = "confirmation?hasil=" + encodeURIComponent(resultText);
+        window.location.href = confirmationUrl;
+    }
+}

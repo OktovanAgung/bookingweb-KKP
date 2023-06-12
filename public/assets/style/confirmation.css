@@ -112,6 +112,27 @@ border-color: #0066ff;
     margin-left: 10px;
 }
 
+.hasil {
+    width: 300px; /* Menentukan lebar container utama */
+    /* border: 1px solid black; */
+    margin-top: -90px;
+}
+
+.layanan,
+.tanggal,
+.waktu {
+    width: 250px; /* Menentukan lebar elemen-elemen dalam container */
+}
+
+label {
+    display: block; /* Mengatur label menjadi blok agar memiliki lebar penuh */
+}
+
+input[type="text"] {
+    width: 100%; /* Menentukan lebar input */
+}
+
+
 .left-side{
     border-right: 2px solid rgb(212, 93, 0);
 }
@@ -131,15 +152,17 @@ border-color: #0066ff;
     height: 100px;
 }
 
-#result {
+.resulttext {
     text-align: left;
-    margin-top: -50px;
-    height: 104px;
+    margin-top: -90px;
+    margin-bottom: 100px;
+    height: 55px;
+    border: 1px solid black;
 }
 
 .sosmed {
     position: fixed;
-    margin-top: 94px;
+    /* margin-top: 94px; */
     width: 228px;
     position: sticky;
     border: 1px solid black;

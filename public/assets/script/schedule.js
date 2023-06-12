@@ -50,6 +50,17 @@ function selectTime(time) {
     }
 }
 
+// Fungsi untuk menampilkan hasil pilihan pada input field
+function displayResults() {
+    const categoryInput = document.getElementById('category');
+    const dateInput = document.getElementById('date');
+    const timeInput = document.getElementById('time');
+
+    // Menampilkan hasil pilihan pada input field
+    categoryInput.value = selectedCategories.join(', ');
+    dateInput.value = selectedDate.toLocaleDateString('en-US');
+    timeInput.value = selectedTime;
+}
 
 // Fungsi untuk menampilkan hasil pilihan pengguna
 function showResults() {
@@ -98,5 +109,8 @@ function showResults() {
 
         var confirmationUrl = "confirmation?hasil=" + encodeURIComponent(resultText);
         window.location.href = confirmationUrl;
+
+        // Tampilkan hasil pada input field
+        displayResults();
     }
 }
