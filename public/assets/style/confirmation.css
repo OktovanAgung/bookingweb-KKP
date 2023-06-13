@@ -192,3 +192,22 @@ a:visited {
     color: black;
     text-decoration: underline; 
 }
+
+.hasil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.hasil label {
+    margin-bottom: 5px;
+}
+
+.hasil input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    color: black;
+    width: 250px;
+}

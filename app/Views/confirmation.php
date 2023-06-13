@@ -17,10 +17,9 @@
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
 
-            <div class="resulttext">
+            <!-- <div class="resulttext">
                 <div id="result"></div>
-
-            </div>
+            </div> -->
 
             <div class="hasil">
                 <label for="category">Kategori:</label>
@@ -29,7 +28,6 @@
                 <input type="text" id="date" readonly>
                 <label for="time">Waktu:</label>
                 <input type="text" id="time" readonly>
-                <button onclick="showResults()">Tampilkan Hasil</button>
             </div>
 
             <div class="sosmed">

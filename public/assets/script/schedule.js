@@ -72,23 +72,23 @@ function showResults() {
 
         if (selectedCategories.length === 1) {
             var selectedButton = selectedCategories[0];
-            if (selectedButton === 'Doktor') {
-                resultText = 'Janji temu Doktor';
+            if (selectedButton === 'Dokter') {
+                resultText = 'Dokter';
             } else if (selectedButton === 'Hotel') {
-                resultText = 'Check in hotel';
+                resultText = 'Hotel';
             } else if (selectedButton === 'Grooming') {
-                resultText = 'Datang Grooming';
+                resultText = 'Grooming';
             }
         } else {
             var selectedButtonNames = [];
             for (var i = 0; i < selectedCategories.length; i++) {
                 var buttonName = selectedCategories[i];
-                if (buttonName === 'Doktor') {
-                    selectedButtonNames.push('Janji Temu Doktor');
+                if (buttonName === 'Dokter') {
+                    selectedButtonNames.push('Dokter');
                 } else if (buttonName === 'Hotel') {
-                    selectedButtonNames.push('Check In Hotel');
+                    selectedButtonNames.push('Hotel');
                 } else if (buttonName === 'Grooming') {
-                    selectedButtonNames.push('Datang Grooming');
+                    selectedButtonNames.push('Grooming');
                 }
             }
 

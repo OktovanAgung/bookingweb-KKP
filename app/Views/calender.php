@@ -16,7 +16,7 @@
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
             <div class="service-button">
-                <button class="button" onclick="toggleSelection('Doktor')">Doktor</button>
+                <button class="button" onclick="toggleSelection('Dokter')">Dokter</button>
                 <button class="button" onclick="toggleSelection('Hotel')">Hotel</button>
                 <button class="button" onclick="toggleSelection('Grooming')">Grooming</button>
             </div>
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <h1>Pilihan Pengguna</h1>
 
         <label for="category">Kategori:</label>
@@ -98,7 +98,7 @@
         <input type="text" id="time" readonly>
 
         <button onclick="showResults()">Tampilkan Hasil</button>
-    </div>
+    </div> -->
 
 
 
