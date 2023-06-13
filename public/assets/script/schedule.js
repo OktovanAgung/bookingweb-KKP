@@ -93,10 +93,10 @@ function showResults() {
             }
 
             if (selectedCategories.length === 2) {
-                resultText = selectedButtonNames.join(' dan ');
+                resultText = selectedButtonNames.join(', ');
             } else if (selectedCategories.length === 3) {
                 var lastButtonName = selectedButtonNames.pop();
-                resultText = selectedButtonNames.join(', ') + ' dan ' + lastButtonName;
+                resultText = selectedButtonNames.join(', ') + ', ' + lastButtonName;
             }
         }
 
