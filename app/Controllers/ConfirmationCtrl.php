@@ -38,7 +38,7 @@ class ConfirmationCtrl extends BaseController
             'nama' => $nama,
             'no_whatsapp' => $whatsapp,
             'nama_pet' => $namaPet,
-            'notes' => $catatan
+            'notes' => $catatan,
         ];
         $pelangganModel->insert($data);
 

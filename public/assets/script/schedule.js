@@ -50,18 +50,6 @@ function selectTime(time) {
     }
 }
 
-// Fungsi untuk menampilkan hasil pilihan pada input field
-function displayResults() {
-    const categoryInput = document.getElementById('category');
-    const dateInput = document.getElementById('date');
-    const timeInput = document.getElementById('time');
-
-    // Menampilkan hasil pilihan pada input field
-    categoryInput.value = selectedCategories.join(', ');
-    dateInput.value = selectedDate.toLocaleDateString('en-US');
-    timeInput.value = selectedTime;
-}
-
 // Fungsi untuk menampilkan hasil pilihan pengguna
 function showResults() {
     const resultElement = document.getElementById('result');
@@ -105,7 +93,7 @@ function showResults() {
         var selectedMonth = getMonthName(selectedDate.getMonth());
         var selectedYear = selectedDate.getFullYear();
 
-        resultText += ' pada hari ' + selectedDay + ', ' + selectedDate.getDate() + ' ' + selectedMonth + ' ' + selectedYear + ', pukul ' + selectedTime;
+        resultText += ' ' + selectedDay + ' ' + selectedDate.getDate() + ' ' + selectedMonth + ' ' + selectedYear + ' ' + selectedTime;
 
         var confirmationUrl = "confirmation?hasil=" + encodeURIComponent(resultText);
         window.location.href = confirmationUrl;

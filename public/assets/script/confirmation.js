@@ -52,11 +52,10 @@ const dateInput = document.getElementById('date');
 const timeInput = document.getElementById('time');
 
 // Memisahkan hasil menjadi kategori, tanggal, dan waktu
-const resultParts = hasil.split(' pada hari ');
-const kategori = resultParts[0];
-const tanggalWaktu = resultParts[1].split(', pukul ');
-const tanggal = tanggalWaktu[0];
-const waktu = tanggalWaktu[1];
+const resultParts = hasil.split(' ');
+const kategori = resultParts.slice(0, -5).join(' ');
+const tanggal = resultParts.slice(-3, -2).join(' ');
+const waktu = resultParts.slice(-1)[0];
 
 // Mengatur nilai input field dengan hasil pilihan
 categoryInput.value = kategori;
