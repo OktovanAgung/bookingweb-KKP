@@ -31,6 +31,9 @@ class ConfirmationCtrl extends BaseController
         $namaPet = $this->request->getPost('nama_pet');
         $whatsapp = $this->request->getPost('whatsapp');
         $catatan = $this->request->getPost('catatan');
+        $layanan = $this->request->getPost('layanan');
+        $tanggal = $this->request->getPost('tanggal');
+        $waktu = $this->request->getPost('waktu');
 
         // Simpan data ke dalam database
         $pelangganModel = new PelangganModel();
@@ -39,6 +42,9 @@ class ConfirmationCtrl extends BaseController
             'no_whatsapp' => $whatsapp,
             'nama_pet' => $namaPet,
             'notes' => $catatan,
+            'layanan' => $layanan,
+            'tanggal' => $tanggal,
+            'waktu' => $waktu
         ];
         $pelangganModel->insert($data);
 

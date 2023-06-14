@@ -21,14 +21,16 @@
                 <div id="result"></div>
             </div>
 
-            <div class="hasil">
-                <label for="category">Kategori:</label>
-                <input type="text" id="category" readonly>
-                <label for="date">Tanggal:</label>
-                <input type="text" id="date" readonly>
-                <label for="time">Waktu:</label>
-                <input type="text" id="time" readonly>
-            </div>
+            <form action="/confirmation/store" method="POST">
+                <div class="hasil">
+                    <label for="layanan">Kategori:</label>
+                    <input type="text" id="layanan" name="layanan" readonly>
+                    <label for="tanggal">Tanggal:</label>
+                    <input type="text" id="tanggal" name="tanggal" readonly>
+                    <label for="waktu">Waktu:</label>
+                    <input type="text" id="waktu" name="waktu" readonly>
+                </div>
+            </form>
 
             <div class="sosmed">
                 <div>
@@ -50,6 +52,11 @@
 
             <form action="/confirmation/store" method="POST">
                 <div class="form">
+
+                    <input type="hidden" id="layanan_hidden" name="layanan">
+                    <input type="hidden" id="tanggal_hidden" name="tanggal">
+                    <input type="hidden" id="waktu_hidden" name="waktu">
+
                     <div class="nama">
                         <label for="nama">Nama Anda:</label>
                         <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda" required>

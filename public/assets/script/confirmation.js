@@ -10,11 +10,18 @@ window.onload = function() {
 };
 
 function konfirmasi() {
-    // Mendapatkan nilai dari input form
-    var nama = document.getElementById('nama').value;
-    var namaPet = document.getElementById('nama_pet').value;
-    var whatsapp = document.getElementById('no_whatsapp').value;
+    // Mengambil nilai input layanan, tanggal, dan waktu dari class left-side
+    var layananValue = document.getElementById('layanan').value;
+    var tanggalValue = document.getElementById('tanggal').value;
+    var waktuValue = document.getElementById('waktu').value;
+    
+    // Menyimpan nilai-nilai tersebut ke dalam input tersembunyi di class right-side
+    document.getElementById('layanan_hidden').value = layananValue;
+    document.getElementById('tanggal_hidden').value = tanggalValue;
+    document.getElementById('waktu_hidden').value = waktuValue;
 
+    // Melakukan submit formulir
+    document.querySelector('form').submit();
     // Validasi
     var namaError = document.getElementById('namaError');
     var namaPetError = document.getElementById('namaPetError');
@@ -41,23 +48,27 @@ function konfirmasi() {
 
     // Jika validasi berhasil, submit form
     document.forms[0].submit();
+
+    setHiddenInputValues();
+    document.forms[0].submit();
 }
 // Ambil nilai dari parameter hasil pada URL
 const urlParams = new URLSearchParams(window.location.search);
 const hasil = urlParams.get('hasil');
 
 // Setel nilai input field dengan hasil pilihan
-const categoryInput = document.getElementById('category');
-const dateInput = document.getElementById('date');
-const timeInput = document.getElementById('time');
+const categoryInput = document.getElementById('layanan');
+const dateInput = document.getElementById('tanggal');
+const timeInput = document.getElementById('waktu');
 
 // Memisahkan hasil menjadi kategori, tanggal, dan waktu
 const resultParts = hasil.split(' ');
 const kategori = resultParts.slice(0, -5).join(' ');
-const tanggal = resultParts.slice(-3, -2).join(' ');
+const tanggal = resultParts.slice(-5, -1).join(' ');
 const waktu = resultParts.slice(-1)[0];
 
-// Mengatur nilai input field dengan hasil pilihan
 categoryInput.value = kategori;
 dateInput.value = tanggal;
 timeInput.value = waktu;
+
+
