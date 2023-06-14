@@ -8,11 +8,43 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 500px;
     height: 650px;
     border: 2px solid rgb(212, 93, 0);
     border-radius: 20px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-    /* background-color: rgb(254, 127, 11); */
+    background-color: rgb(254, 127, 11);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 170px;
+}
+
+.label {
+    color: white;
+    margin-top: 10px;
+}
+
+.tabel {
+    border: 2px solid rgb(212, 93, 0);
+    background-color: white;
+    border-radius: 20px;
+    height: 446px;
+    width: 467px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
