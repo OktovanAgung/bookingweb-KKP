@@ -23,27 +23,33 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nama</th>
-                        <th>No. WhatsApp</th>
-                        <th>Nama Pet</th>
-                        <th>Notes</th>
-                        <th>Layanan</th>
-                        <th>Tanggal & Waktu</th>
-                        <th>Tombol</th>
+                        <th class="id-cell">ID</th>
+                        <th class="nama-cell">Nama</th>
+                        <th class="whatsapp-cell">WhatsApp</th>
+                        <th class="pet-cell">Pet</th>
+                        <th class="notes-cell">Notes</th>
+                        <th class="layanan-cell">Layanan</th>
+                        <th class="tanggal-cell">Tanggal & Waktu</th>
+                        <th class="button-cell">Tombol</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    // Mengurutkan array $pelanggan secara terbalik berdasarkan indeks 'id'
+                    usort($pelanggan, function ($a, $b) {
+                        return $b['id'] - $a['id'];
+                    });
+                    ?>
                     <?php foreach ($pelanggan as $row) : ?>
                         <tr>
-                            <td><?= $row['id'] ?></td>
-                            <td><?= $row['nama'] ?></td>
-                            <td><?= $row['no_whatsapp'] ?></td>
-                            <td><?= $row['nama_pet'] ?></td>
-                            <td><?= $row['notes'] ?></td>
-                            <td><?= $row['layanan'] ?></td>
-                            <td><?= $row['tanggal'] ?> <?= $row['waktu'] ?></td>
-                            <td>
+                            <td class="id-cell"><?= $row['id'] ?></td>
+                            <td class="nama-cell"><?= $row['nama'] ?></td>
+                            <td class="whatsapp-cell"><?= $row['no_whatsapp'] ?></td>
+                            <td class="pet-cell"><?= $row['nama_pet'] ?></td>
+                            <td class="notes-cell"><?= $row['notes'] ?></td>
+                            <td class="layanan-cell"><?= $row['layanan'] ?></td>
+                            <td class="tanggal-cell"><?= $row['tanggal'] ?> <?= $row['waktu'] ?></td>
+                            <td class="button-cell">
                                 <button>Edit</button>
                                 <button>Delete</button>
                             </td>
