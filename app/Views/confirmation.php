@@ -17,9 +17,9 @@
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
 
-            <div class="resulttext">
+            <!-- <div class="resulttext">
                 <div id="result"></div>
-            </div>
+            </div> -->
 
             <form action="/confirmation/store" method="POST">
                 <div class="hasil">

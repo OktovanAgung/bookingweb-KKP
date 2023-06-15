@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 700px;
     height: 650px;
     border: 2px solid rgb(212, 93, 0);
     border-radius: 20px;
@@ -19,11 +19,20 @@ body {
     background-color: rgb(254, 127, 11);
 }
 
-.logo {
+.header {
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    /* border: 1px solid black; */
+    margin-top: -70px;
+}
+
+.logo {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo img {
@@ -31,20 +40,35 @@ body {
 }
 
 .label {
+    /* border: 1px solid black; */
     color: white;
     margin-top: 10px;
+    margin-left: 120px; /* Menambahkan jarak sebelah kiri */
 }
 
+
 .tabel {
-    border: 2px solid rgb(212, 93, 0);
-    background-color: white;
-    border-radius: 20px;
-    height: 446px;
-    width: 467px;
-    margin-top: 20px;
+    height: 496px;
+    width: 667px;
+    /* border: 1px solid black; */
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
+    background-color: white;
+    width: 667px;
+    font-size: 12px; /* Ukuran font yang lebih kecil */
+}
+
+th,
+td {
+    border: 1px solid rgb(212, 93, 0);
+    padding: 8px;
+    text-align: center;
+    font-size: 12px; /* Ukuran font yang lebih kecil */
+}
+
+th {
+    background-color: rgb(212, 93, 0);
+    color: white;
 }

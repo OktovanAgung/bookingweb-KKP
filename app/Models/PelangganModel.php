@@ -8,5 +8,5 @@ class PelangganModel extends Model
 {
     protected $table = 'tb_pelanggan';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['nama', 'no_whatsapp', 'nama_pet', 'notes', 'booking', 'layanan', 'tanggal', 'waktu'];
+    protected $allowedFields = ['id', 'nama', 'no_whatsapp', 'nama_pet', 'notes', 'layanan', 'tanggal', 'waktu'];
 }

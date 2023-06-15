@@ -2,12 +2,15 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
+use App\Models\PelangganModel;
 
-class AdminCtrl extends Controller
+class AdminCtrl extends BaseController
 {
     public function index()
     {
-        return view('admin');
+        $pelangganModel = new PelangganModel();
+        $data['pelanggan'] = $pelangganModel->findAll();
+
+        return view('admin', $data);
     }
 }
