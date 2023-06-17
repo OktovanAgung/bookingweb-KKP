@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 650px;
+    border: 2px solid rgb(212, 93, 0);
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    background-color: rgb(254, 127, 11);
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin-top: -70px;
+}
+
+.logo {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+}
+
+.label {
+    /* border: 1px solid black; */
+    color: white;
+    margin-top: 10px;
+    margin-left: 120px;
+    /* Menambahkan jarak sebelah kiri */
+}
+
+
+.tabel {
+    height: 496px;
+    width: 685px;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+    width: 667px;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid rgb(212, 93, 0);
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    /* Ukuran font yang lebih kecil */
+}
+
+th {
+    background-color: rgb(212, 93, 0);
+    color: white;
+}
+
+/* Menyembunyikan scrollbar di Chrome, Safari, dan Opera */
+/* .tabel::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.tabel::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.tabel::-webkit-scrollbar-thumb {
+    background-color: transparent;
+} */
+
+
+/* Gaya untuk tiap sel */
+td.id-cell {
+    width: 5px;
+}
+
+td.nama-cell {
+    width: 100px;
+}
+
+td.whatsapp-cell {
+    width: 50px;
+}
+
+td.pet-cell {
+    width: 100px;
+}
+
+td.notes-cell {
+    width: 150px;
+}
+
+td.layanan-cell {
+    width: 100px;
+}
+
+td.tanggal-cell {
+    width: 150px;
+}
+
+td.button-cell {
+    width: 100px;
+}

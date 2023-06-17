@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 602px;
+    height: 460px;
+    padding: 20px;
+    border: 2px solid rgb(212, 93, 0);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    background-color: rgb(254, 127, 11);
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -90px;
+}
+
+.logo img {
+    width: 244.29px; 
+    height: 244.29px;
+}
+
+/* Mengubah tampilan input teks */
+input[type="text"],
+textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+/* Mengubah tampilan placeholder pada input teks */
+input[type="text"]::placeholder,
+textarea::placeholder {
+color: #999;
+}
+
+/* Mengubah tampilan saat input teks mendapat fokus */
+input[type="text"]:focus,
+textarea:focus {
+outline: none;
+border-color: #0066ff;
+}
+
+.right-side {
+    padding: 20px;
+    width: 261px;
+}
+
+.nama,
+.hewan,
+.whatsapp{
+    height: 60px;
+}
+
+
+.error{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-bottom: 100px;
+}
+
+.right-button{
+    display: flex;
+    justify-content: right;
+    width: 281px;
+    border: 1px solid black;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    margin-right: 115px;
+
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+.button1:hover,
+.button2:hover {
+    background-color: rgb(221, 153, 221);
+    border-color: rgb(221, 153, 221);
+}
+
+.button button {
+    margin-left: 10px;
+}
+
+.hasil {
+    width: 300px; /* Menentukan lebar container utama */
+    /* border: 1px solid black; */
+    margin-top: -90px;
+}
+
+.layanan,
+.tanggal,
+.waktu {
+    width: 250px; /* Menentukan lebar elemen-elemen dalam container */
+}
+
+label {
+    display: block; /* Mengatur label menjadi blok agar memiliki lebar penuh */
+}
+
+input[type="text"] {
+    width: 100%; /* Menentukan lebar input */
+}
+
+
+.left-side{
+    border-right: 2px solid rgb(212, 93, 0);
+}
+
+.right-side input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.right-side textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+    height: 100px;
+}
+
+.resulttext {
+    text-align: left;
+    margin-top: -90px;
+    margin-bottom: 100px;
+    height: 55px;
+    border: 1px solid black;
+}
+
+.sosmed {
+    position: fixed;
+    /* margin-top: 94px; */
+    width: 228px;
+    position: sticky;
+    border: 1px solid black;
+}
+
+
+.sosmed div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sosmed img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+a:hover,
+a:visited {
+    color: black;
+    text-decoration: underline; 
+}
+
+.hasil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.hasil label {
+    margin-bottom: 5px;
+}
+
+.hasil input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    color: black;
+    width: 250px;
+}
