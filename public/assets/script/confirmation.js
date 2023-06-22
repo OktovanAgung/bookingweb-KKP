@@ -20,6 +20,18 @@ function konfirmasi() {
     document.getElementById('tanggal_hidden').value = tanggalValue;
     document.getElementById('waktu_hidden').value = waktuValue;
 
+    var layananValue = document.getElementById('layanan').value;
+    var tanggalValue = document.getElementById('tanggal').value;
+    var waktuValue = document.getElementById('waktu').value;
+    
+    var urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('layanan', layananValue);
+    urlParams.set('tanggal', tanggalValue);
+    urlParams.set('waktu', waktuValue);
+    
+    window.location.href = "booked.php?" + urlParams.toString();
+    
+
     // Melakukan submit formulir
     document.querySelector('form').submit();
     // Validasi

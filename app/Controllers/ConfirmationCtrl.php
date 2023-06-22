@@ -48,7 +48,7 @@ class ConfirmationCtrl extends BaseController
         ];
         $pelangganModel->insert($data);
 
-        // Redirect ke halaman booked
-        return redirect()->to('/booked');
+        // Redirect ke halaman booked dengan flash data
+        return redirect()->to('/booked')->with('layanan', $layanan)->with('tanggal', $tanggal)->with('waktu', $waktu);
     }
 }

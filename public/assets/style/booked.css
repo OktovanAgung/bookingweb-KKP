@@ -15,35 +15,56 @@ body {
   border: 2px solid rgb(212, 93, 0);
   border-radius: 20px;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-  /* background-color: rgb(254, 127, 11); */
 }
 
 .top-side{
   align-self: flex-start;
   height: 100px;
   width: 350px;
-  /* border-bottom: 1px solid rgb(212, 93, 0); */
-  border: 1px solid black;
 }
 
 .logo {
   text-align: center;
   margin-top: -25px;
-  /* border: 1px solid black; */
 }
 
 .mid-side {
   align-self: center;
 }
 
+.title {
+  width: 345px;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1.5px solid rgba(212, 92, 0, 0.500);
+}
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-top: 30px;
+  border-bottom: 1.5px solid rgba(212, 92, 0, 0.500);
+}
 
+.kiri {
+  margin-left: 20px; ;
+}
+
+.tengah {
+  text-align:center;
+}
+
+.kanan {
+  margin-right: 20px;
+  text-align: left;
+}
 
 .sosmed {
+  margin-top: 50px; ;
   height: 100px;
   width: 350px;
   align-self: flex-end;
-  border: 1px solid black;
 }
 
 .logo img {

@@ -16,12 +16,29 @@
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
         </div>
-
         <div class="mid-side">
-            <p>Booking berhasil dibuat.</p>
-            <p>Terima kasih telah mempercayakan hewan peliharaan Anda kepada kami. Kami akan memberikan perawatan terbaik yang mereka butuhkan.</p>
+            <div class="title">
+                <p>Booking telah berhasil dibuat.</p>
+                <p>Terima kasih telah mempercayakan hewan peliharaan Anda kepada kami. Kami akan memberikan perawatan terbaik yang mereka butuhkan.</p>
+            </div>
+            <div class="content">
+                <div class="kiri">
+                    <p>Layanan</p>
+                    <p>Tanggal</p>
+                    <p>Waktu</p>
+                </div>
+                <div class="tengah">
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                </div>
+                <div class="kanan">
+                    <p><span><?= session('layanan') ?></span></p>
+                    <p><span><?= session('tanggal') ?></span></p>
+                    <p><span><?= session('waktu') ?></span></p>
+                </div>
+            </div>
         </div>
-
         <div class="sosmed">
             <div>
                 <img src="/assets/img/maps_logo.png" alt="Logo">
@@ -37,6 +54,9 @@
             </div>
         </div>
     </div>
+
+    <script src="<?= base_url('assets/script/booked.js') ?>"></script>
+
 </body>
 
 </html>
