@@ -60,7 +60,6 @@ td {
     display: flex;
     align-items: center;
     width: 100%;
-    /* border: 1px solid black; */
 }
 
 #currentMonthYear {
@@ -68,7 +67,6 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
 }
 
 .month-button {
@@ -80,7 +78,6 @@ td {
     background-color: white;
     border-radius: 10px;
     cursor: pointer;
-    /* border: 1px solid black; */
     border: 1px solid white;
 }
 
@@ -119,7 +116,6 @@ td {
     display: flex;
     flex-direction: column;
     margin-top: 39px;
-    border: 1px solid black;
 }
 
 .sosmed div {

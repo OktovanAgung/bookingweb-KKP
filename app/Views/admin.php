@@ -31,7 +31,7 @@
                 <h1>Booking List</h1>
             </div>
             <div class="tanggal">
-                <h1>Tanggal Sekarang:</h1>
+                <h1>Tanggal Sekarang : </h1>
                 <p id="currentDate"></p>
             </div>
         </div>
@@ -66,8 +66,7 @@
                             <td class="layanan-cell"><?= $row['layanan'] ?></td>
                             <td class="tanggal-cell"><?= $row['tanggal'] ?> <?= $row['waktu'] ?></td>
                             <td class="button-cell">
-                                <button>Edit</button>
-                                <button>Delete</button>
+                                <button onclick="toggleButtonColor(this)">Selesai</button>
                             </td>
                         </tr>
                     <?php endforeach; ?>

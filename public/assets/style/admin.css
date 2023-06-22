@@ -23,7 +23,6 @@ body {
     height: 100px;
     display: flex;
     align-items: center;
-    /* border: 1px solid black; */
 }
 
 .logo img {
@@ -60,14 +59,14 @@ body {
     color: #000000;
 }
 
-
-
+.highlight {
+    background-color: #16FF00;
+}
 
 .tabel {
     height: 496px;
     width: 685px;
     overflow-y: scroll;
-    /* border: 1px solid black; */
 }
 
 table {
@@ -83,27 +82,12 @@ td {
     padding: 8px;
     text-align: center;
     font-size: 14px;
-    /* Ukuran font yang lebih kecil */
 }
 
 th {
     background-color: rgb(212, 93, 0);
     color: white;
 }
-
-/* Menyembunyikan scrollbar di Chrome, Safari, dan Opera */
-/* .tabel::-webkit-scrollbar {
-    width: 0.5em;
-}
-
-.tabel::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-.tabel::-webkit-scrollbar-thumb {
-    background-color: transparent;
-} */
-
 
 /* Gaya untuk tiap sel */
 td.id-cell {
