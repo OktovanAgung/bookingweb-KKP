@@ -67,10 +67,17 @@ body {
 }
 
 .sosmed {
-  margin-top: 50px; ;
-  height: 100px;
-  width: 350px;
-  align-self: flex-end;
+  margin-top: 35px;
+  margin-right: 100px;
+  position: fixed;
+  width: 228px;
+  position: sticky;
+}
+
+.sosmed div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .sosmed img {
