@@ -18,35 +18,25 @@
         </div>
 
         <div class="mid-side">
-            <div class="top-text">
-                <p>Booking berhasil dibuat.</p>
-                <p>Terima kasih telah mempercayakan hewan peliharaan Anda kepada kami. Kami akan memberikan perawatan terbaik yang mereka butuhkan.</p>
-            </div>
-
-
-
+            <p>Booking berhasil dibuat.</p>
+            <p>Terima kasih telah mempercayakan hewan peliharaan Anda kepada kami. Kami akan memberikan perawatan terbaik yang mereka butuhkan.</p>
         </div>
 
         <div class="sosmed">
-            <div class="maps">
+            <div>
                 <img src="/assets/img/maps_logo.png" alt="Logo">
                 <a href="https://shorturl.at/lOTV5">Ruko Melawai, Jl. Metland Cibitung No.22</a>
             </div>
-            <div class="ig">
+            <div>
                 <img src="/assets/img/ig_logo.png" alt="Logo">
                 <a href="https://www.instagram.com/sandio_petcare/">Instagram</a>
             </div>
-            <div class="wa">
+            <div>
                 <img src="/assets/img/whatsapp_logo.png" alt="Logo">
                 <a href="https://www.instagram.com/sandio_petcare/">WhatsApp</a>
             </div>
         </div>
     </div>
-
-
-    <script src="<?= base_url('assets/script/booked.js') ?>"></script>
-
-
 </body>
 
 

@@ -70,3 +70,5 @@ const waktu = resultParts.slice(-1)[0];
 categoryInput.value = kategori;
 dateInput.value = tanggal;
 timeInput.value = waktu;
+
+
