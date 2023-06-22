@@ -7,9 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('assets/style/admin.css') ?>">
     <title>Admin</title>
+    <script>
+        function displayCurrentDate() {
+            var currentDate = new Date();
+            var day = currentDate.getDate();
+            var month = currentDate.getMonth() + 1; // Menggunakan indeks bulan dimulai dari 0
+            var year = currentDate.getFullYear();
+
+            var dateString = day + "-" + month + "-" + year;
+
+            document.getElementById("currentDate").innerHTML = dateString;
+        }
+    </script>
 </head>
 
-<body>
+<body onload="displayCurrentDate()">
     <div class="container">
         <div class="header">
             <div class="logo">
@@ -17,6 +29,10 @@
             </div>
             <div class="label">
                 <h1>Booking List</h1>
+            </div>
+            <div class="tanggal">
+                <h1>Tanggal Sekarang:</h1>
+                <p id="currentDate"></p>
             </div>
         </div>
         <div class="tabel">
@@ -59,6 +75,9 @@
             </table>
         </div>
     </div>
+
+    <script src="<?= base_url('assets/script/admin.js') ?>"></script>
+
 </body>
 
 </html>

@@ -20,39 +20,54 @@ body {
 }
 
 .header {
-    height: 80px;
+    height: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     /* border: 1px solid black; */
-    margin-top: -70px;
-}
-
-.logo {
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo img {
-    width: 170px;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px; 
 }
 
-.label {
-    /* border: 1px solid black; */
-    color: white;
-    margin-top: 10px;
-    margin-left: 120px;
-    /* Menambahkan jarak sebelah kiri */
+.label h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #000000;
+    margin-right: 20px;
+    margin-top: 60px;
 }
+
+.tanggal {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 60px;
+
+}
+
+.tanggal h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+}
+
+.tanggal p {
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+}
+
+
 
 
 .tabel {
     height: 496px;
     width: 685px;
     overflow-y: scroll;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 table {
