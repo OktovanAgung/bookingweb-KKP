@@ -24,6 +24,7 @@
             </div>
 
 
+
         </div>
 
         <div class="sosmed">
@@ -41,6 +42,11 @@
             </div>
         </div>
     </div>
+
+
+    <script src="<?= base_url('assets/script/booked.js') ?>"></script>
+
+
 </body>
 
 
