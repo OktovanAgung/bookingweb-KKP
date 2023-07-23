@@ -31,6 +31,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('/admin', 'AdminCtrl::index');
+$routes->get('/calender', 'CalenderCtrl::calender');
+$routes->get('/confirmation', 'ConfirmationCtrl::index');
+$routes->post('/confirmation/store', 'ConfirmationCtrl::store');
+$routes->get('/booked', 'BookedCtrl::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

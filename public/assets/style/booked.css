@@ -1,0 +1,98 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 600px;
+  border: 2px solid rgb(212, 93, 0);
+  border-radius: 20px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}
+
+.top-side{
+  align-self: flex-start;
+  height: 100px;
+  width: 350px;
+}
+
+.logo {
+  text-align: center;
+  margin-top: -25px;
+}
+
+.mid-side {
+  align-self: center;
+}
+
+.title {
+  width: 345px;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1.5px solid rgba(212, 92, 0, 0.500);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-top: 30px;
+  border-bottom: 1.5px solid rgba(212, 92, 0, 0.500);
+}
+
+.kiri {
+  margin-left: 20px; ;
+}
+
+.tengah {
+  text-align:center;
+}
+
+.kanan {
+  margin-right: 20px;
+  text-align: left;
+}
+
+.logo img {
+  width: 50%; 
+  height: 50%;
+}
+
+.sosmed {
+  margin-top: 35px;
+  margin-right: 100px;
+  position: fixed;
+  width: 228px;
+  position: sticky;
+}
+
+.sosmed div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sosmed img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: underline; 
+}
