@@ -36,8 +36,6 @@ $routes->get('/calender', 'CalenderCtrl::calender');
 $routes->get('/confirmation', 'ConfirmationCtrl::index');
 $routes->post('/confirmation/store', 'ConfirmationCtrl::store');
 $routes->get('/booked', 'BookedCtrl::index');
-$routes->post('update_status_selesai', 'AdminCtrl::updateStatusSelesai');
-
 
 /*
  * --------------------------------------------------------------------
