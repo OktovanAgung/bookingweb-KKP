@@ -56,7 +56,6 @@
             </table>
         </div>
     </div>
-
     <script src="<?= base_url('assets/script/admin.js') ?>"></script>
 </body>
 
