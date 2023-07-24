@@ -7,18 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('assets/style/admin.css') ?>">
     <title>Admin</title>
-    <script>
-        function displayCurrentDate() {
-            var currentDate = new Date();
-            var day = currentDate.getDate();
-            var month = currentDate.getMonth() + 1; // Menggunakan indeks bulan dimulai dari 0
-            var year = currentDate.getFullYear();
-
-            var dateString = day + "-" + month + "-" + year;
-
-            document.getElementById("currentDate").innerHTML = dateString;
-        }
-    </script>
 </head>
 
 <body onload="displayCurrentDate()">
@@ -50,14 +38,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    // Mengurutkan array $pelanggan secara terbalik berdasarkan indeks 'id'
-                    usort($pelanggan, function ($a, $b) {
-                        return $b['id'] - $a['id'];
-                    });
-                    ?>
-                    <?php foreach ($pelanggan as $row) : ?>
-                        <tr>
+                    <?php foreach (array_reverse($pelanggan) as $row) : ?>
+                        <tr <?php if ($row['selesai'] == 1) echo 'class="highlight"'; ?>>
                             <td class="id-cell"><?= $row['id'] ?></td>
                             <td class="nama-cell"><?= $row['nama'] ?></td>
                             <td class="whatsapp-cell"><?= $row['no_whatsapp'] ?></td>
@@ -66,7 +48,7 @@
                             <td class="layanan-cell"><?= $row['layanan'] ?></td>
                             <td class="tanggal-cell"><?= $row['tanggal'] ?> <?= $row['waktu'] ?></td>
                             <td class="button-cell">
-                                <button onclick="toggleButtonColor(this)">Selesai</button>
+                                <button onclick="handleButtonClick(this)" data-id="<?= $row['id'] ?>">Selesai</button>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -76,7 +58,6 @@
     </div>
 
     <script src="<?= base_url('assets/script/admin.js') ?>"></script>
-
 </body>
 
 </html>
