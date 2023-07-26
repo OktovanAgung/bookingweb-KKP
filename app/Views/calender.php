@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <div class="left-sidebar">
+        <div class="left-side">
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
@@ -61,7 +61,7 @@
             </table>
         </div>
 
-        <div class="right-sidebar">
+        <div class="right-side">
             <div class="selected-date-container">
                 <div id="selectedDate"></div>
             </div>

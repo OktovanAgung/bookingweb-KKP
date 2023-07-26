@@ -9,8 +9,8 @@ function showSelectedDate() {
     var selectedDateContainer = document.querySelector('.selected-date-container');
     selectedDateContainer.textContent = ""+ selectedDay + ", " + selectedDate.getDate() + " " + selectedMonth + " " + selectedYear;
 
-    // Tambahkan kode berikut untuk menampilkan right-sidebar saat tanggal dipilih
-    var rightSidebar = document.querySelector('.right-sidebar');
+    // Tambahkan kode berikut untuk menampilkan right-side saat tanggal dipilih
+    var rightSidebar = document.querySelector('.right-side');
     rightSidebar.classList.add('show');
 }
 
