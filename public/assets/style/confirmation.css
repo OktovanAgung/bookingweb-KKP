@@ -8,7 +8,7 @@ body {
 
 .container {
     width: 602px;
-    height: 460px;
+    height: 460px ;
     padding: 20px;
     border: 2px solid rgb(212, 93, 0);
     border-radius: 20px;
@@ -17,6 +17,45 @@ body {
     grid-template-columns: 1fr 1px 1fr;
     background-color: rgb(254, 127, 11);
 }
+
+/* Untuk tampilan di perangkat dengan lebar maksimal 600px (misalnya smartphone) */
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
+    height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
+    margin-top: 300px;
+  }
+}
+
+.left-side{
+    border-right: 2px solid rgb(212, 93, 0);
+    /* border: 1px solid black; */
+}
+
+.right-side {
+    padding: 20px;
+    width: 261px;
+    /* border: 1px solid black; */
+}
+
+/* Untuk tampilan di perangkat dengan lebar maksimal 600px (misalnya smartphone) */
+@media screen and (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
+    }
+  
+    .right-side {
+      order: 1; /* Menggeser right-side ke atas */
+      border-top: 2px solid rgb(212, 93, 0); /* Menambahkan garis atas pada right-side */
+      border-right: none; /* Menghapus garis kanan pada right-side */
+    }
+  
+    .left-side {
+      border-right: none; /* Menghapus garis kanan pada left-side */
+      border-bottom: 2px solid rgb(212, 93, 0); /* Menambahkan garis bawah pada left-side */
+    }
+  }
+  
 
 .logo {
     text-align: center;
@@ -53,11 +92,6 @@ input[type="text"]:focus,
 textarea:focus {
 outline: none;
 border-color: #0066ff;
-}
-
-.right-side {
-    padding: 20px;
-    width: 261px;
 }
 
 .nama,
@@ -130,10 +164,6 @@ label {
 
 input[type="text"] {
     width: 100%; 
-}
-
-.left-side{
-    border-right: 2px solid rgb(212, 93, 0);
 }
 
 .right-side input[type="text"] {

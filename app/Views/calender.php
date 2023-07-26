@@ -35,6 +35,7 @@
                 </div>
             </div>
         </div>
+
         <div class="calendar-container">
             <div class="month-year-container">
                 <button id="prevMonthButton" class="month-button">
@@ -58,6 +59,7 @@
                 <tbody id="dateBody"></tbody>
             </table>
         </div>
+
         <div class="right-sidebar">
             <div class="selected-date-container">
                 <div id="selectedDate"></div>

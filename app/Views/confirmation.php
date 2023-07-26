@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+
         <div class="right-side">
             <form action="/confirmation/store" method="POST">
                 <div class="form">
