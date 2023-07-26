@@ -149,6 +149,7 @@ td {
 }
 
 /* ----- right-side ----- */
+
 .right-side {
     width: 230px;
     height: 420px;
@@ -252,3 +253,6 @@ td {
         margin-left: 46px;
     }
 }
+
+
+/* border-right: 2px solid rgb(212, 93, 0); */

@@ -1,31 +1,32 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center ;
     height: 100vh;
-    margin: 0;
+    overflow: auto; /* Tambahkan properti overflow untuk dapat di-scroll */
+    padding: 10px;
 }
 
 .container {
-    width: 602px;
-    height: 460px ;
+    height: 460px;
+    margin: 10px auto;
     padding: 20px;
     border: 2px solid rgb(212, 93, 0);
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     background-color: rgb(254, 127, 11);
 }
 
-.left-side{
-    border-right: 2px solid rgb(212, 93, 0);
-    /* border: 1px solid black; */
-}
+/* ----- left-side ----- */
 
-.right-side {
-    padding: 20px;
-    width: 261px;
+.left-side {
+    width: 300px;
+    height: 100%;
+    /* border-right: 2px solid rgb(212, 93, 0); */
     /* border: 1px solid black; */
 }
 
@@ -34,49 +35,53 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: -90px;
+    margin-right: 5px;
 }
 
 .logo img {
-    width: 244.29px; 
+    width: 244.29px;
     height: 244.29px;
 }
 
-/* Mengubah tampilan input teks */
-input[type="text"],
-textarea {
-width: 100%;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 4px;
-font-size: 16px;
-margin-bottom: 10px;
+.sosmed div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-/* Mengubah tampilan placeholder pada input teks */
-input[type="text"]::placeholder,
-textarea::placeholder {
-color: #999;
+.sosmed img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
 }
 
-/* Mengubah tampilan saat input teks mendapat fokus */
-input[type="text"]:focus,
-textarea:focus {
-outline: none;
-border-color: #0066ff;
+a {
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+a:hover,
+a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
+/* ----- right-side ----- */
+
+
+.right-side {
+    padding: 20px;
+    width: 261px;
+    /* border: 1px solid black; */
 }
 
 .nama,
 .hewan,
 .whatsapp{
-    height: 60px;
-}
-
-
-.error{
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    margin-bottom: 100px;
+    height: 70px;
 }
 
 .right-button{
@@ -119,6 +124,40 @@ border-color: #0066ff;
     margin-left: 10px;
 }
 
+/* ----- input field ---- */
+
+/* tampilan input teks */
+input[type="text"],
+textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+/* tampilan placeholder pada input teks */
+input[type="text"]::placeholder,
+textarea::placeholder {
+color: #999;
+}
+
+/* tampilan saat input teks mendapat fokus */
+input[type="text"]:focus,
+textarea:focus {
+outline: none;
+border-color: #0066ff;
+}
+
+.error{
+    color: rgb(250, 14, 14);
+    font-size: 15px;
+    margin-bottom: 100px;
+}
+
+
+
 .hasil {
     width: 300px; 
     margin-top: -90px;
@@ -157,30 +196,6 @@ input[type="text"] {
     position: fixed;
     width: 228px;
     position: sticky;
-}
-
-.sosmed div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.sosmed img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    margin-left: 5px;
-}
-
-a:hover,
-a:visited {
-    color: black;
-    text-decoration: underline; 
 }
 
 .hasil {
