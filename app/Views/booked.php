@@ -39,6 +39,7 @@
                 </div>
             </div>
         </div>
+
         <div class="sosmed">
             <div>
                 <img src="/assets/img/maps_logo.png" alt="Logo">

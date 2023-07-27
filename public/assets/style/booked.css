@@ -41,22 +41,27 @@ body {
 
 .content {
   display: flex;
-  justify-content: space-between;
   font-size: 18px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-bottom: 1.5px solid rgba(212, 92, 0, 0.500);
 }
 
 .kiri {
-  margin-left: 20px; ;
+  margin-left: 10px;
+  margin-right: 20px;
+  /* border: 1px solid black; */
 }
 
 .tengah {
   text-align:center;
+  margin-right: 20px;
+  /* border: 1px solid black; */
+
 }
 
 .kanan {
-  margin-right: 20px;
+  /* border: 1px solid black; */
+  margin-right: 10px;
   text-align: left;
 }
 

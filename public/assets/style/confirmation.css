@@ -46,9 +46,11 @@ body {
 }
 
 .sosmed {
-    position: fixed;
+    /* border: 1px solid black; */
     width: 228px;
-    position: sticky;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .sosmed div {
@@ -57,10 +59,19 @@ body {
     margin-bottom: 10px;
 }
 
+.IGWA {
+    display: flex;
+    justify-content: space-between;
+}
+
+.WA{
+    margin-right: 23px;
+}
+
 .sosmed img {
     width: 25px;
     height: 25px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 a {
@@ -188,7 +199,6 @@ input[type="text"] {
     padding: 10px;
     margin-bottom: 10px;
     resize: vertical;
-    /* background-color: #0066ff; */
 }
 
 .right-side textarea {
@@ -197,7 +207,6 @@ input[type="text"] {
     margin-bottom: 10px;
     resize: vertical;
     height: 100px;
-    /* background-color: #0066ff; */
 
 }
 
@@ -234,6 +243,21 @@ input[type="text"] {
         grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
         height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
         overflow: hidden;
+    }
+
+    .left-side{
+    border-bottom: 2px solid rgb(212, 93, 0);
+    }
+
+    .sosmed{
+        margin-top: -330px;
+        margin-bottom: 240px;
+        margin-left: 40px;
+        /* border: 1px solid black; */
+    }
+
+    .hasil{
+        margin-top: 20px;
     }
 
     .hasil {

@@ -26,17 +26,19 @@
                 </div>
             </form>
             <div class="sosmed">
-                <div>
+                <div class="maps">
                     <img src="/assets/img/maps_logo.png" alt="Logo">
                     <a href="https://shorturl.at/lOTV5">Ruko Melawai, Jl. Metland Cibitung No.22</a>
                 </div>
-                <div>
-                    <img src="/assets/img/ig_logo.png" alt="Logo">
-                    <a href="https://www.instagram.com/sandio_petcare/">Instagram</a>
-                </div>
-                <div>
-                    <img src="/assets/img/whatsapp_logo.png" alt="Logo">
-                    <a href="https://www.instagram.com/sandio_petcare/">WhatsApp</a>
+                <div class="IGWA">
+                    <div class="IG">
+                        <img src="/assets/img/ig_logo.png" alt="Logo">
+                        <a href="https://www.instagram.com/sandio_petcare/">Instagram</a>
+                    </div>
+                    <div class="WA">
+                        <img src="/assets/img/whatsapp_logo.png" alt="Logo">
+                        <a href="https://www.instagram.com/sandio_petcare/">WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </div>
