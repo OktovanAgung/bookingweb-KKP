@@ -1,21 +1,22 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center ;
     height: 100vh;
-    margin: 0;
+    padding: 10px;
 }
-
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 750px;
-    height: 650px;
+    width: 730px;
+    height: 590px;
+    margin: 10px auto;
+    padding: 20px;
     border: 2px solid rgb(212, 93, 0);
     border-radius: 20px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     background-color: rgb(254, 127, 11);
 }
 
@@ -120,4 +121,63 @@ td.tanggal-cell {
 
 td.button-cell {
     width: 100px;
+}
+
+/* ----- MOBILE UI ----- */
+
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
+        height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
+        overflow: hidden;
+    }
+
+    /* Atur lebar tabel pada tampilan mobile */
+    table {
+        width: 100%; /* Misalnya, atur lebar tabel menjadi 100% dari kontainer atau layar */
+    }
+
+    .tabel {
+        overflow-x: auto;
+    }
+
+     /* Atur ukuran div dengan class "header" pada tampilan mobile */
+    .header {
+        height: 100px;
+        display: flex;
+        align-items: end;
+        border: 1px solid black;
+    }
+
+    .logo img {
+        width: 80%; /* Misalnya, atur lebar logo menjadi 150px */
+        height: 80%; /* Misalnya, atur tinggi logo menjadi 150px */
+        margin-right: 0; /* Hapus margin-right agar logo berada di tengah */
+    }
+
+    .label h1 {
+        margin: 0;
+        font-size: 5px; /* Misalnya, atur ukuran font label menjadi 24px */
+        color: #000000;
+    }
+
+    .tanggal {
+        margin-left: 0; /* Hapus margin-left agar tanggal berada di tengah */
+        margin-top: 10px; /* Beri sedikit margin atas agar ada jarak dengan label */
+    }
+
+    .tanggal h1 {
+        font-size: 5px; /* Misalnya, atur ukuran font tanggal menjadi 16px */
+    }
+
+    .tanggal p {
+        font-size: 5px; /* Misalnya, atur ukuran font tanggal menjadi 16px */
+    }
 }
