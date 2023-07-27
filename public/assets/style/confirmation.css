@@ -45,6 +45,12 @@ body {
     height: 244.29px;
 }
 
+.sosmed {
+    position: fixed;
+    width: 228px;
+    position: sticky;
+}
+
 .sosmed div {
     display: flex;
     align-items: center;
@@ -182,6 +188,7 @@ input[type="text"] {
     padding: 10px;
     margin-bottom: 10px;
     resize: vertical;
+    /* background-color: #0066ff; */
 }
 
 .right-side textarea {
@@ -190,12 +197,8 @@ input[type="text"] {
     margin-bottom: 10px;
     resize: vertical;
     height: 100px;
-}
+    /* background-color: #0066ff; */
 
-.sosmed {
-    position: fixed;
-    width: 228px;
-    position: sticky;
 }
 
 .hasil {
@@ -215,4 +218,47 @@ input[type="text"] {
     background-color: #f9f9f9;
     color: black;
     width: 250px;
+}
+
+/* ----- MOBILE UI ----- */
+
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start ;
+        height: 100vh;
+    }
+    
+    .container {
+        grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
+        height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
+        overflow: hidden;
+    }
+
+    .hasil {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    
+    .hasil label {
+        margin-left: 9px;
+        margin-bottom: 5px;
+    }
+    
+    .hasil input[type="text"] {
+        margin-left: 9px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #f9f9f9;
+        color: black;
+        width: 260px;
+    }
+
+    .right-side{
+        margin-right: 20px;
+        /* border: 1px solid black; */
+    }
 }
