@@ -28,6 +28,7 @@ body {
     width: 230px;
     height: 100%;
     /* border-right: 2px solid rgb(212, 93, 0); */
+
     /* border: 1px solid black; */
 }
 
@@ -57,6 +58,7 @@ body {
 }
 
 .sosmed {
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -68,10 +70,19 @@ body {
     margin-bottom: 10px;
 }
 
+.IGWA {
+    display: flex;
+    justify-content: space-between;
+}
+
+.WA{
+    margin-right: 25px;
+}
+
 .sosmed img {
     width: 25px;
     height: 25px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 a {
@@ -93,7 +104,7 @@ a:visited {
     height: 410px auto;
     border-radius: 20px;
     background-color: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 table {
@@ -168,7 +179,7 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 15px;
     max-height: calc(100% - 80px);
     overflow-y: auto;
@@ -246,28 +257,36 @@ td {
     }
 
     .left-side{
+        padding: 15px;
         margin-right: -4px;
+        /* border: 1px solid black; */
+        
     }
-    
+
     .sosmed{
-        margin-top: -310px;
-        margin-bottom: 160px;
+        margin-top: -280px;
+        margin-bottom: 150px;
+        margin-left: 5px;
+    }
+
+    .WA{
+        margin-right: 20px;
     }
 
     .service-button{
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
-    .right-side {
-        margin-top: 10px;
+    .right-side{
         margin-right: 25px;
     }
 
-    .selected-date-container {
-        width: 150px;
-        margin-left: 50px;
+    .selected-date-container{
+        margin-left: 20px;
         /* border: 1px solid black; */
+        
     }
+
 }
 
 
