@@ -24,6 +24,7 @@ body {
     height: 100px;
     display: flex;
     align-items: center;
+    border: 1px solid black;
 }
 
 .logo img {
@@ -148,36 +149,48 @@ td.button-cell {
         overflow-x: auto;
     }
 
-     /* Atur ukuran div dengan class "header" pada tampilan mobile */
     .header {
-        height: 100px;
+        width: 100%;
+        height: 50px;
         display: flex;
-        align-items: end;
-        border: 1px solid black;
+        align-items: center;
+        /* border: 1px solid black; */
     }
-
+    
     .logo img {
-        width: 80%; /* Misalnya, atur lebar logo menjadi 150px */
-        height: 80%; /* Misalnya, atur tinggi logo menjadi 150px */
-        margin-right: 0; /* Hapus margin-right agar logo berada di tengah */
+        width: 90px;
+        height: 90px;
+        margin-right: 5px;
+        margin-top: 20px;
+        /* border: 1px solid black; */
     }
-
+    
     .label h1 {
         margin: 0;
-        font-size: 5px; /* Misalnya, atur ukuran font label menjadi 24px */
+        font-size: 13px;
+        color: #000000;
+        margin-top: 34px;
+        /* border: 1px solid black; */
+
+    }
+    
+    .tanggal {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+        /* border: 1px solid black; */
+    }
+    
+    .tanggal h1 {
+        margin: 0;
+        font-size: 11px;
+        color: #000000;
+    }
+    
+    .tanggal p {
+        margin: 0;
+        font-size: 11px;
         color: #000000;
     }
 
-    .tanggal {
-        margin-left: 0; /* Hapus margin-left agar tanggal berada di tengah */
-        margin-top: 10px; /* Beri sedikit margin atas agar ada jarak dengan label */
-    }
-
-    .tanggal h1 {
-        font-size: 5px; /* Misalnya, atur ukuran font tanggal menjadi 16px */
-    }
-
-    .tanggal p {
-        font-size: 5px; /* Misalnya, atur ukuran font tanggal menjadi 16px */
-    }
 }
