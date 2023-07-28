@@ -267,7 +267,7 @@ td {
         margin-top: -280px;
         margin-bottom: 150px;
         margin-left: 5px;
-        border: 1px solid black;
+        /* border: 1px solid black; */
 
     }
 
@@ -290,6 +290,3 @@ td {
     }
 
 }
-
-
-/* border-right: 2px solid rgb(212, 93, 0); */

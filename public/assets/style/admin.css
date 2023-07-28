@@ -8,8 +8,7 @@ body {
 .container {
     width: 730px;
     height: 590px;
-    margin: 10px auto;
-    padding: 20px;
+    padding-bottom: 20px;
     border: 2px solid rgb(212, 93, 0);
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -66,6 +65,17 @@ body {
     height: 496px;
     width: 685px;
     overflow-y: scroll;
+    /* border-radius: 20px; */
+}
+
+/* Menyembunyikan scrollbar pada peramban berbasis WebKit */
+.tabel::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.tabel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
 }
 
 table {
@@ -121,6 +131,31 @@ td.button-cell {
     width: 100px;
 }
 
+/* ----- Button ----- */
+
+.button-cell button {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(254, 127, 11);
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    width: 100% ;
+    text-align: center;
+}
+
+.button-cell button:hover {
+    background-color: rgb(221, 153, 221);
+    border-color: rgb(221, 153, 221);
+}
+
+.button-cell button:active {
+    background-color: rgb(151, 71, 255);
+    border-color: rgb(151, 71, 255);
+    color: white;
+}
+
 /* ----- MOBILE UI ----- */
 
 @media screen and (max-width: 600px) {
@@ -132,18 +167,10 @@ td.button-cell {
     }
 
     .container {
+        padding-left: 10px;
         grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
         height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
         overflow: hidden;
-    }
-
-    /* Atur lebar tabel pada tampilan mobile */
-    table {
-        width: 100%; /* Misalnya, atur lebar tabel menjadi 100% dari kontainer atau layar */
-    }
-
-    .tabel {
-        overflow-x: auto;
     }
 
     .header {
@@ -190,4 +217,76 @@ td.button-cell {
         width: 100px;
         height: 10px;
     }
+
+    .tabel {
+        overflow-x: auto;
+    }
+
+    table {
+        
+        border-collapse: collapse;
+        background-color: white;
+        width: 300px;
+        /* font-size: 10px; */
+    }
+    
+    th,
+    td {
+        border: 1px solid rgb(212, 93, 0);
+        padding: 1px;
+        text-align: center;
+        font-size: 9px;
+    }
+    
+    th {
+        background-color: rgb(212, 93, 0);
+        color: white;
+    }
+    
+    /* Gaya untuk tiap sel */
+    td.id-cell {
+        width: -5px;
+    }
+    
+    td.nama-cell {
+        width: 10px;
+    }
+    
+    td.whatsapp-cell {
+        width: 50px;
+    }
+    
+    td.pet-cell {
+        width: 30px;
+    }
+    
+    td.notes-cell {
+        width: 50px;
+    }
+    
+    td.layanan-cell {
+        width: 20px;
+    }
+    
+    td.tanggal-cell {
+        width: 50px;
+    }
+    
+    td.button-cell {
+        width: 10px;
+    }
+
+    .button-cell button {
+        width: 50px;
+        background-color: white;
+        color: black;
+        border: 1px solid rgb(254, 127, 11);
+        border-radius: 5px;
+        font-size: 10px;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        margin-left: 5px;
+    }
+
 }
