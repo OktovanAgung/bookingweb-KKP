@@ -167,10 +167,10 @@ outline: none;
 border-color: #0066ff;
 }
 
-.error{
-    color: rgb(255, 0, 0);
-    font-size: 15px;
-    margin-top: 30px;
+.error {
+    color: red; /* Merubah warna teks menjadi merah */
+    font-size: 14px; /* Merubah ukuran font menjadi 14px */
+    margin-top: 5px; /* Mengatur jarak atas sebesar 5px */
 }
 
 
