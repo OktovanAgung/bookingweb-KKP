@@ -15,12 +15,17 @@
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
+            <!-- <div class="search">
+                <input type="text" id="searchInput" placeholder="Cari...">
+            </div> -->
             <div class="label">
                 <h1>Booking List</h1>
             </div>
             <div class="tanggal">
-                <h1>Tanggal Sekarang : </h1>
-                <p id="currentDate"></p>
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Cari...">
+                </div>
+                <p>Tanggal Sekarang: <span id="currentDate"></span></p>
             </div>
         </div>
         <div class="tabel">
