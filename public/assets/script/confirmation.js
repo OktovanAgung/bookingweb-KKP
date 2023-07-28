@@ -20,20 +20,11 @@ function konfirmasi() {
     document.getElementById('tanggal_hidden').value = tanggalValue;
     document.getElementById('waktu_hidden').value = waktuValue;
 
-    var layananValue = document.getElementById('layanan').value;
-    var tanggalValue = document.getElementById('tanggal').value;
-    var waktuValue = document.getElementById('waktu').value;
-    
-    var urlParams = new URLSearchParams(window.location.search);
-    urlParams.set('layanan', layananValue);
-    urlParams.set('tanggal', tanggalValue);
-    urlParams.set('waktu', waktuValue);
-    
-    window.location.href = "booked.php?" + urlParams.toString();
-    
+    // Mengambil nilai input nama, namaPet, dan whatsapp
+    var namaValue = document.getElementById('nama').value;
+    var namaPetValue = document.getElementById('nama_pet').value;
+    var whatsappValue = document.getElementById('no_whatsapp').value;
 
-    // Melakukan submit formulir
-    document.querySelector('form').submit();
     // Validasi
     var namaError = document.getElementById('namaError');
     var namaPetError = document.getElementById('namaPetError');
@@ -43,27 +34,26 @@ function konfirmasi() {
     namaPetError.textContent = '';
     whatsappError.textContent = '';
 
-    if (nama === '') {
+    if (namaValue === '') {
         namaError.textContent = 'Nama Anda harus diisi';
         return;
     }
 
-    if (namaPet === '') {
+    if (namaPetValue === '') {
         namaPetError.textContent = 'Nama Hewan Peliharaan harus diisi';
         return;
     }
 
-    if (whatsapp === '') {
+    if (whatsappValue === '') {
         whatsappError.textContent = 'Nomor Whatsapp harus diisi';
         return;
     }
 
-    // Jika validasi berhasil, submit form
-    document.forms[0].submit();
-
-    setHiddenInputValues();
+    // Melakukan submit formulir
     document.forms[0].submit();
 }
+
+
 // Ambil nilai dari parameter hasil pada URL
 const urlParams = new URLSearchParams(window.location.search);
 const hasil = urlParams.get('hasil');

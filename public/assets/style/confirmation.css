@@ -168,11 +168,10 @@ border-color: #0066ff;
 }
 
 .error{
-    color: rgb(250, 14, 14);
+    color: rgb(255, 0, 0);
     font-size: 15px;
     margin-bottom: 100px;
 }
-
 
 
 .hasil {
