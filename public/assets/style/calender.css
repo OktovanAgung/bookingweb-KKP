@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center ;
     height: 100vh;
-    overflow: auto; /* Tambahkan properti overflow untuk dapat di-scroll */
+    overflow: auto;
     padding: 10px;
 }
 
@@ -27,9 +27,6 @@ body {
     margin-right: 10px;
     width: 230px;
     height: 100%;
-    /* border-right: 2px solid rgb(212, 93, 0); */
-
-    /* border: 1px solid black; */
 }
 
 .logo {
@@ -58,7 +55,6 @@ body {
 }
 
 .sosmed {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -82,7 +78,6 @@ body {
 .sosmed img {
     width: 25px;
     height: 25px;
-    /* margin-right: 10px; */
 }
 
 a {
@@ -104,7 +99,6 @@ a:visited {
     height: 410px auto;
     border-radius: 20px;
     background-color: white;
-    /* border: 1px solid black; */
 }
 
 table {
@@ -167,8 +161,6 @@ td {
     width: 230px;
     height: 420px;
     display: none;
-    /* border: 1px solid black; */
-    /* border-left: 2px solid rgb(212, 93, 0); */
 }
 
 .right-side.show {
@@ -230,17 +222,17 @@ td {
     }
     
     .container {
-        grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
-        height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
+        grid-template-columns: 1fr;
+        height: auto;
         overflow: hidden;
     }
 
     .calendar-container {
-        width: auto; /* Lebar otomatis sesuai konten */
-        height: auto; /* Tinggi otomatis sesuai konten */
-        max-width: 100%; /* Lebar maksimum 90% dari lebar layar */
-        border-radius: 10px; /* Mengurangi radius border untuk tampilan yang lebih kecil */
-        margin-top: 20px; /* Menambahkan margin atas untuk tampilan yang lebih baik */
+        width: auto;
+        height: auto;
+        max-width: 100%; 
+        border-radius: 10px;
+        margin-top: 20px;
     }
     .calendar-container table {
         margin-bottom: 10px;
@@ -248,7 +240,7 @@ td {
     
     .calendar-container th,
     .calendar-container td {
-        padding: 2px; /* Mengurangi padding agar sel dan header lebih kompak di tampilan mobile */
+        padding: 2px;
     }
 
     table th,
@@ -259,16 +251,12 @@ td {
     .left-side{
         padding: 15px;
         margin-right: -4px;
-        /* border: 1px solid black; */
-        
     }
 
     .sosmed{
         margin-top: -280px;
         margin-bottom: 150px;
         margin-left: 5px;
-        /* border: 1px solid black; */
-
     }
 
     .WA{
@@ -285,8 +273,5 @@ td {
 
     .selected-date-container{
         margin-left: 20px;
-        /* border: 1px solid black; */
-        
     }
-
 }

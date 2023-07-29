@@ -24,7 +24,6 @@ body {
     height: 100px;
     display: flex;
     align-items: center;
-    /* border: 1px solid black; */
 }
 
 .logo img {
@@ -39,7 +38,6 @@ body {
     font-size: 20px;
     color: #000000;
     text-align: center;
-    /* border: 1px solid black; */
 }
 
 .tanggal {
@@ -48,7 +46,6 @@ body {
     font-size: 20px;
     margin-left: 55px;
     margin-top: 20px;
-    /* border: 1px solid black; */
 }
 
 .search {
@@ -168,8 +165,8 @@ td.button-cell {
 
     .container {
         padding-left: 10px;
-        grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
-        height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
+        grid-template-columns: 1fr;
+        height: auto;
         overflow: hidden;
     }
 
@@ -178,14 +175,12 @@ td.button-cell {
         height: 60px;
         display: flex;
         align-items: center;
-        /* border: 1px solid black; */
     }
     
     .logo img {
         float: left;
         width: 100px;
         height: 100px;
-        /* border: 1px solid black; */
     }
     
     .label {
@@ -195,7 +190,6 @@ td.button-cell {
         font-size: 8px;
         color: #000000;
         text-align: center;
-        /* border: 1px solid black; */
     }
     
     .tanggal {
@@ -204,12 +198,10 @@ td.button-cell {
         font-size: 12px;
         margin-left: 0px;
         margin-top: 20px;
-        /* border: 1px solid black; */
     }
     
     .search {
         margin-left: 35px;
-        /* margin-bottom: 10px; */
     }
 
     #searchInput {
@@ -227,7 +219,6 @@ td.button-cell {
         border-collapse: collapse;
         background-color: white;
         width: 300px;
-        /* font-size: 10px; */
     }
     
     th,
@@ -288,5 +279,4 @@ td.button-cell {
         text-align: center;
         margin-left: 5px;
     }
-
 }

@@ -15,9 +15,6 @@
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Logo">
             </div>
-            <!-- <div class="search">
-                <input type="text" id="searchInput" placeholder="Cari...">
-            </div> -->
             <div class="label">
                 <h1>Booking List</h1>
             </div>

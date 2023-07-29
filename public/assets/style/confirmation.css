@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center ;
     height: 100vh;
-    overflow: auto; /* Tambahkan properti overflow untuk dapat di-scroll */
+    overflow: auto;
     padding: 10px;
 }
 
@@ -26,8 +26,6 @@ body {
 .left-side {
     width: 300px;
     height: 100%;
-    /* border-right: 2px solid rgb(212, 93, 0); */
-    /* border: 1px solid black; */
 }
 
 .logo {
@@ -46,7 +44,6 @@ body {
 }
 
 .sosmed {
-    /* border: 1px solid black; */
     width: 228px;
     display: flex;
     flex-direction: column;
@@ -71,7 +68,6 @@ body {
 .sosmed img {
     width: 25px;
     height: 25px;
-    /* margin-right: 10px; */
 }
 
 a {
@@ -92,7 +88,6 @@ a:visited {
 .right-side {
     padding: 20px;
     width: 261px;
-    /* border: 1px solid black; */
 }
 
 .nama,
@@ -168,9 +163,9 @@ border-color: #0066ff;
 }
 
 .error {
-    color: red; /* Merubah warna teks menjadi merah */
-    font-size: 14px; /* Merubah ukuran font menjadi 14px */
-    margin-top: 5px; /* Mengatur jarak atas sebesar 5px */
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 
@@ -239,8 +234,8 @@ input[type="text"] {
     }
     
     .container {
-        grid-template-columns: 1fr; /* Mengatur kolom menjadi satu saat di tampilan smartphone */
-        height: auto; /* Mengatur tinggi menjadi otomatis agar sesuai dengan kontennya */
+        grid-template-columns: 1fr; 
+        height: auto;
         overflow: hidden;
     }
 
@@ -252,7 +247,6 @@ input[type="text"] {
         margin-top: -330px;
         margin-bottom: 240px;
         margin-left: 40px;
-        /* border: 1px solid black; */
     }
 
     .hasil{
@@ -282,6 +276,5 @@ input[type="text"] {
 
     .right-side{
         margin-right: 20px;
-        /* border: 1px solid black; */
     }
 }
