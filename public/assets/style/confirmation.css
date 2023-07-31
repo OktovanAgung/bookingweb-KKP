@@ -63,10 +63,11 @@ body {
 }
 
 .WA{
-    margin-right: 23px;
+    margin-right: 6px;
 }
 
 .sosmed img {
+    margin-right: -5px;
     width: 25px;
     height: 25px;
 }
@@ -101,7 +102,7 @@ a:visited {
     display: flex;
     justify-content: right;
     width: 281px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 3px;
 }
 
@@ -114,7 +115,7 @@ a:visited {
     font-size: 20px;
     cursor: pointer;
     display: flex;
-    margin-right: 115px;
+    margin-right: 102px;
 
 }
 
@@ -142,6 +143,7 @@ a:visited {
 /* ----- input field ---- */
 
 /* tampilan input teks */
+
 input[type="text"],
 textarea {
 width: 100%;
@@ -247,7 +249,7 @@ input[type="text"] {
     }
 
     .sosmed{
-        margin-top: -330px;
+        margin-top: -350px;
         margin-bottom: 240px;
         margin-left: 40px;
     }
@@ -279,5 +281,38 @@ input[type="text"] {
 
     .right-side{
         margin-right: 20px;
+    }
+
+    .right-button{
+        display: flex;
+        justify-content: right;
+        width: 281px;
+        margin-top: 30px;
+        margin-left: 3px;
+    }
+    
+    .button1 {
+        font-family: 'Poppins';
+        background-color: white;
+        color: black;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        margin-right: 100px;
+    
+    }
+    
+    .button2 {
+        font-family: 'Poppins';
+        background-color: white;
+        color: black;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        margin-right: 1px;
     }
 }

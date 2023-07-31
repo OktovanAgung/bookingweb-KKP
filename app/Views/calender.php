@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="<?= base_url("/assets/img/logo.png") ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500&family=Josefin+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('assets/style/calender.css') ?>">
-    <title>Datepicker</title>
+    <title>SanDio Booking</title>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <button class="button" onclick="toggleSelection('Grooming')">Grooming</button>
             </div>
             <div class="sosmed">
-                <div class="maps">
+                <div class="MAPS">
                     <img src="/assets/img/maps_logo.png" alt="Logo">
                     <a href="https://shorturl.at/lOTV5">Ruko Melawai, Jl. Metland Cibitung No.22</a>
                 </div>

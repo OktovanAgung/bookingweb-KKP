@@ -73,10 +73,11 @@ body {
 }
 
 .WA{
-    margin-right: 25px;
+    margin-right: 6px;
 }
 
 .sosmed img {
+    margin-right: -5px;
     width: 25px;
     height: 25px;
 }
@@ -109,7 +110,7 @@ table {
 
 th,
 td {
-    padding: 10px;
+    padding: 7px;
     text-align: center;
 }
 
@@ -257,8 +258,8 @@ td {
     }
 
     .sosmed{
-        margin-top: -280px;
-        margin-bottom: 150px;
+        margin-top: -310px;
+        margin-bottom: 170px;
         margin-left: 5px;
     }
 
