@@ -1,5 +1,5 @@
 body {
-    font-family: 'Josefin Sans';
+    font-family: 'Poppins';
     display: flex;
     justify-content: center;
     align-items: center ;
@@ -106,6 +106,7 @@ a:visited {
 }
 
 .button1 {
+    font-family: 'Poppins';
     background-color: white;
     color: black;
     border: 1px solid white;
@@ -118,6 +119,7 @@ a:visited {
 }
 
 .button2 {
+    font-family: 'Poppins';
     background-color: white;
     color: black;
     border: 1px solid white;

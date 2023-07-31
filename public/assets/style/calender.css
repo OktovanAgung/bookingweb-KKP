@@ -1,5 +1,5 @@
 body {
-    font-family: 'Josefin Sans';
+    font-family: 'Poppins';
     display: flex;
     justify-content: center;
     align-items: center ;
@@ -114,6 +114,7 @@ td {
 }
 
 .date-button {
+    font-family: 'Poppins';
     border: none;
     border-radius: 5px;
     padding: 8px;
@@ -188,6 +189,7 @@ td {
 /* ----- Button ----- */
 
 .button {
+    font-family: 'Poppins';
     background-color: white;
     color: black;
     border: 1px solid white;
