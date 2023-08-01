@@ -47,15 +47,15 @@
         <div class="sosmed">
             <div>
                 <img src="/assets/img/maps_logo.png" alt="Logo">
-                <a href="https://shorturl.at/lOTV5">Ruko Melawai, Jl. Metland Cibitung No.22</a>
+                <a href="https://goo.gl/maps/eAN9kY4uLTdqHudH9" target="_blank">Ruko Melawai, Jl. Metland Cibitung No.22</a>
             </div>
             <div>
                 <img src="/assets/img/ig_logo.png" alt="Logo">
-                <a href="https://www.instagram.com/sandio_petcare/">Instagram</a>
+                <a href="https://www.instagram.com/sandio_petcare/" target="_blank">Instagram</a>
             </div>
             <div>
                 <img src="/assets/img/whatsapp_logo.png" alt="Logo">
-                <a href="https://www.instagram.com/sandio_petcare/">WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=6281311672018" target="_blank">WhatsApp</a>
             </div>
         </div>
     </div>
