@@ -23,4 +23,6 @@
 
 ## Untuk Video Demonstrasi Silakan Klik Link Dibawah Ini
 
-[![Video Demonstrasi](https://img.youtube.com/vi/dwVuoCaQJ9g/0.jpg)](https://youtu.be/dwVuoCaQJ9g)
+[Klik untuk menonton video demonstrasi.](https://youtu.be/dwVuoCaQJ9g)
+
+[![Klik untuk Menonton Video Demonstrasi](https://img.youtube.com/vi/dwVuoCaQJ9g/0.jpg)](https://youtu.be/dwVuoCaQJ9g)
