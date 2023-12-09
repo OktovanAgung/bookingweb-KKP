@@ -6,17 +6,17 @@
 | Dosen Pengampu | : Wahyu Hadikristanto, S.Kom., M.Kom. |
 
 - Tampilan Halaman Utama
-  ![img](gambar/home1.png)
-  ![img](gambar/home2.png)
+  ![img](Gambar/home1.png)
+  ![img](Gambar/home2.png)
 
 - Tampilan Halaman Konfirmasi
-  ![img](gambar/konfirmasi1.png)
-  ![img](gambar/konfirmasi2.png)
+  ![img](Gambar/konfirmasi1.png)
+  ![img](Gambar/konfirmasi2.png)
 
 - Tampilan Halaman Selsai
-  ![img](gambar/selesai1.png)
-  ![img](gambar/selesai2.png)
+  ![img](Gambar/selesai1.png)
+  ![img](Gambar/selesai2.png)
 
 - Tampilan Halaman Admin
-  ![img](gambar/admin1.png)
-  ![img](gambar/admin2.png)
+  ![img](Gambar/admin1.png)
+  ![img](Gambar/admin2.png)
