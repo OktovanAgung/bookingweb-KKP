@@ -15,7 +15,7 @@
 
 - Tampilan Halaman Selsai
   ![img](gambar/selesai1.png)
-  ![img](gambar/selsai2.png)
+  ![img](gambar/selesai2.png)
 
 - Tampilan Halaman Admin
   ![img](gambar/admin1.png)
