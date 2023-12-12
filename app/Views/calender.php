@@ -24,7 +24,8 @@
                 <button class="button" onclick="toggleSelection('Hotel')">Hotel</button>
                 <button class="button" onclick="toggleSelection('Grooming')">Grooming</button>
             </div>
-            <div class="sosmed">
+
+            <!-- <div class="sosmed">
                 <div class="MAPS">
                     <img src="/assets/img/maps_logo.png" alt="Logo">
                     <a href="https://goo.gl/maps/eAN9kY4uLTdqHudH9" target="_blank">Ruko Melawai, Jl. Metland Cibitung No.22</a>
@@ -39,7 +40,8 @@
                         <a href="https://api.whatsapp.com/send?phone=6281311672018" target="_blank">WhatsApp</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
         </div>
 
         <div class="calendar-container">

@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="sosmed">
+        <!-- <div class="sosmed">
             <div>
                 <img src="/assets/img/maps_logo.png" alt="Logo">
                 <a href="https://goo.gl/maps/eAN9kY4uLTdqHudH9" target="_blank">Ruko Melawai, Jl. Metland Cibitung No.22</a>
@@ -57,7 +57,8 @@
                 <img src="/assets/img/whatsapp_logo.png" alt="Logo">
                 <a href="https://api.whatsapp.com/send?phone=6281311672018" target="_blank">WhatsApp</a>
             </div>
-        </div>
+        </div> -->
+
     </div>
 
     <script src="<?= base_url('assets/script/booked.js') ?>"></script>
